@@ -66,7 +66,7 @@ if __name__ == "__main__":
     # Train for n iterations and report results (mean episode rewards).
     for iteration in range(100000):
         results = algo.train()
-        print(f"Iter: {i}; avg. reward={results['episode_reward_mean']}")
+        print(f"Iter: {iteration}; avg. reward={results['episode_reward_mean']}")
 
         if iteration % 100 == 0:
             env = PygameEnv()

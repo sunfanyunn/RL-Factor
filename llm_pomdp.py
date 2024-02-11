@@ -8,33 +8,6 @@ from game_structure import GameRep
 from openai import OpenAI
 
 
-def modify_python_code_for_pygbag(input_code):
-    # Step 3: Replace "def main():" with "async def main():"
-    modified_code = input_code.replace("def main():", "async def main():")
-
-    # Step 1: Replace "main()" with "asyncio.run(main())"
-    modified_code = modified_code.replace(
-        'if __name__ == "__main__":\n    main()',
-        'if __name__ == "__main__":\n    asyncio.run(main())',
-    )
-
-    # Step 2: Add "await asyncio.sleep(0)" after "clock.tick(state_manager.fps)"
-    if "clock.tick(state_manager.fps)" in modified_code:
-        modified_code = modified_code.replace(
-            "clock.tick(state_manager.fps)",
-            "clock.tick(state_manager.fps)\n        await asyncio.sleep(0)",
-        )
-
-    return "import asyncio\n" + modified_code
-
-
-def for_pygbag(game):
-    code = game.export_code()
-    modified_code = modify_python_code_for_pygbag(code)
-    with open("pygbag_game/main.py", "w") as f:
-        f.write(modified_code)
-
-
 if __name__ == "__main__":
     # Set these game constants
     WIDTH, HEIGHT, FPS = 800, 600, 60

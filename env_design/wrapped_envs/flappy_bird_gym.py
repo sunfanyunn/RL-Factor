@@ -31,15 +31,20 @@ class PygameEnv(gym.Env):
     def perform_action(self, action):
         # Implement action handling here
         if action == 1:
-            # Trigger the flap action
-            pygame.event.post(pygame.event.Event(pygame.KEYDOWN, key=pygame.K_SPACE))
+            return pygame.event.Event(pygame.MOUSEBUTTONDOWN)
+        else:
+            return pygame.event.Event(pygame.NOEVENT)
         
     def step(self, action):
         # Execute one time step within the environment
-        self.perform_action(action)
-        event = pygame.event.poll()
+        event = self.perform_action(action)
         running = self.game.run(event)
-        pygame.display.flip()
+        for _ in range(5):
+            event = pygame.event.poll()
+            running = self.game.run(event)
+            if not running:
+                break
+
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
         reward = self.get_reward()
         terminated = not running 
@@ -47,9 +52,9 @@ class PygameEnv(gym.Env):
         info = {}  # Additional info for debugging
         return observation, reward, terminated, info
     
-    def reset(self):
-        event = pygame.event.poll()
-        running = self.game.run(event)
+    def reset(self, *, seed=None, options=None):
+        self.game.reset()
+        running = self.game.run(pygame.event.Event(pygame.NOEVENT))
         pygame.display.flip()
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
         info = {}  # Additional info for debugging
@@ -58,14 +63,13 @@ class PygameEnv(gym.Env):
 
 if __name__ == "__main__":
     env = PygameEnv()
-    observation, info = env.reset()
-    print(type(observation))
+    observation = env.reset()
     print(observation.shape, observation.dtype)
-    input()
+
     done = False
     while not done:
-        action = env.action_space.sample()
-        observation, reward, done, truncated, info = env.step(action)
+        action = int(input())
+        observation, reward, done, info = env.step(action)
         print(observation.shape)
     pygame.quit()
     env.close()
