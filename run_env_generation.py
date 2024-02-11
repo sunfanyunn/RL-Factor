@@ -6,33 +6,7 @@ import os
 import sys
 from game_structure import GameRep
 from openai import OpenAI
-
-
-def modify_python_code_for_pygbag(input_code):
-    # Step 3: Replace "def main():" with "async def main():"
-    modified_code = input_code.replace("def main():", "async def main():")
-
-    # Step 1: Replace "main()" with "asyncio.run(main())"
-    modified_code = modified_code.replace(
-        'if __name__ == "__main__":\n    main()',
-        'if __name__ == "__main__":\n    asyncio.run(main())',
-    )
-
-    # Step 2: Add "await asyncio.sleep(0)" after "clock.tick(state_manager.fps)"
-    if "clock.tick(state_manager.fps)" in modified_code:
-        modified_code = modified_code.replace(
-            "clock.tick(state_manager.fps)",
-            "clock.tick(state_manager.fps)\n        await asyncio.sleep(0)",
-        )
-
-    return "import asyncio\n" + modified_code
-
-
-def for_pygbag(game):
-    code = game.export_code()
-    modified_code = modify_python_code_for_pygbag(code)
-    with open("pygbag_game/main.py", "w") as f:
-        f.write(modified_code)
+from ray.rllib.algorithms.ppo import PPOConfig
 
 
 if __name__ == "__main__":
@@ -40,82 +14,28 @@ if __name__ == "__main__":
     parser.add_argument('--log_dir', type=str, help='Directory for logs')
     parser.add_argument('--env_name', type=str, help='Environment name')
     parser.add_argument('--game_template', type=str, help='Game template')
-    parser.add_argument('--debug_mode', type=int, choices=[1, 2, 3], help='Debug mode')
+    parser.add_argument('--debug_mode', type=int, default=3, choices=[1, 2, 3], help='Debug mode')
 
     # Parse arguments
     args = parser.parse_args()
 
-    # Use arguments
-    log_dir = args.log_dir
-    game_template = args.game_template
-    debug_mode = args.mode
+    if False:
+        # Use arguments
+        log_dir = args.log_dir
+        game_template = args.game_template
+        debug_mode = args.debug_mode
 
-    # Set these game constants
-    WIDTH, HEIGHT, FPS = 800, 600, 60
-    log_dir = sys.argv[1]
-    game_template = sys.argv[2]
+        #api_key_path = '/ccn2/u/locross/llmv_marl/llm_plan/lc_api_key.json'
+        api_key_path = '/Users/locro/Documents/Stanford/lc_api_key.json'
+        OPENAI_KEYS = json.load(open(api_key_path, 'r'))
+        api_key = OPENAI_KEYS['API_KEY']
+        client = OpenAI(api_key=api_key)
 
-    #api_key_path = '/ccn2/u/locross/llmv_marl/llm_plan/lc_api_key.json'
-    api_key_path = '/Users/locro/Documents/Stanford/lc_api_key.json'
-    OPENAI_KEYS = json.load(open(api_key_path, 'r'))
-    api_key = OPENAI_KEYS['API_KEY']
-    client = OpenAI(api_key=api_key)
+        game = GameRep(log_dir=args.log_dir, debug_mode=debug_mode, client=client)
+        pass_test, error_msg = game.pass_sanity_check()
+        print(error_msg)
+        assert pass_test
 
-    game = GameRep(
-        HEIGHT, WIDTH, FPS, log_dir=log_dir, debug_mode=debug_mode, client=client
-    )
-    pass_test, error_msg = game.pass_sanity_check()
-    print(error_msg)
-    assert pass_test
-
-    if debug_mode == 1:
-        # Function to import 'prompts.py' dynamically from a given directory
-        module_path = f"games.single_player_games.{game_template}.prompts"
-        module = importlib.import_module(module_path)
-        iterative_prompts = module.iterative_prompts.split("\n")
-        for query_idx, query in enumerate(iterative_prompts):
-            if len(query):
-                for response in game.process_user_query(query.strip()):
-                    print(response)
-
-                # save game repr
-                game.client = None
-                filename = f"{game.log_dir}/{game.query_idx-1}/{game.num_api_calls}_game_rep.pkl"
-                with open(filename, "wb") as file:
-                    pickle.dump(game, file)
-                with open(f"{game.log_dir}/final.pkl", "wb") as file:
-                    pickle.dump(game, file)
-
-                game.client = client
-
-                for_pygbag(game)
-        code = game.export_code()
-        implementation_path = os.path.join("env_design/envs/", args.env_name + ".py")
-        with open(implementation_path, "w") as f:
-            f.write(code)
-
-    if debug_mode == 2:
-        # debug from scratch
-        while True:
-            query = input("Enter a query:")
-            for response in game.process_user_query(query):
-                print(response)
-            # save game repr
-            game.client = None
-            filename = (
-                f"{game.log_dir}/{game.query_idx-1}/{game.num_api_calls}_game_rep.pkl"
-            )
-            with open(filename, "wb") as file:
-                pickle.dump(game, file)
-            game.client = client
-
-            for_pygbag(game)
-        code = game.export_code()
-        implementation_path = os.path.join("env_design/envs/", args.env_name + ".py")
-        with open(implementation_path, "w") as f:
-            f.write(code)
-
-    if debug_mode == 3:
         # load game rep from a file and evaluate
         filename = sys.argv[2]
         game = pickle.load(open(filename, "rb"))
@@ -124,3 +44,44 @@ if __name__ == "__main__":
         implementation_path = "env_design/envs/flappy_bird_test.py"
         with open(implementation_path, "w") as f:
             f.write(code)
+
+    from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
+    # Create an RLlib Algorithm instance from a PPOConfig to learn how to
+    # act in the above environment.
+    config = (
+        PPOConfig()
+        .environment(
+            # Env class to use (here: our gym.Env sub-class from above).
+            env=PygameEnv,
+            # Config dict to be passed to our custom env's constructor.
+            env_config={
+            },
+        )
+        # Parallelize environment rollouts.
+        .rollouts(num_rollout_workers=3)
+    )
+    # Use the config's `build()` method to construct a PPO object.
+    algo = config.build()
+
+    # Train for n iterations and report results (mean episode rewards).
+    for iteration in range(100000):
+        results = algo.train()
+        print(f"Iter: {i}; avg. reward={results['episode_reward_mean']}")
+
+        if iteration % 100 == 0:
+            env = PygameEnv()
+            # Get the initial observation (some value between -10.0 and 10.0).
+            obs, info = env.reset()
+            terminated = truncated = False
+            total_reward = 0.0
+            # Play one episode.
+            while not terminated and not truncated:
+                # Compute a single action, given the current observation
+                # from the environment.
+                action = algo.compute_single_action(obs)
+                # Apply the computed action in the environment.
+                obs, reward, terminated, truncated, info = env.step(action)
+                # Sum up rewards for reporting purposes.
+                total_reward += reward
+            # Report results.
+            print(f"Shreaked for 1 episode; total-reward={total_reward}")

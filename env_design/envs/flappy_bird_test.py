@@ -1,4 +1,5 @@
-
+import os
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 import pygame
 import sys
 import random
@@ -14,11 +15,11 @@ class State:
 
 class StateManager:
     def __init__(self):
-        # height of the gameplay screen
-        self.SCREEN_HEIGHT = int(600)
-        
         # width of the gameplay screen
-        self.SCREEN_WIDTH = int(800)
+        self.SCREEN_WIDTH = int(240)
+
+        # height of the gameplay screen
+        self.SCREEN_HEIGHT = int(320)
         
         # fps of the gameplay screen
         self.FPS = int(60)
