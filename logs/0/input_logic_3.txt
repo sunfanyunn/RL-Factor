@@ -1,0 +1,80 @@
+The game designer is building a single-player game in Pygame by modeling this game as a Markov Decision Process (MDP). Your task is to detect key/mouse input and update the state variables accordingly according to a feature requested by the game designer.
+The game has the following implementation already:
+```python
+import pygame
+import sys
+import random
+
+
+class StateManager:
+    def __init__(self):
+        # height of the gameplay screen
+        self.SCREEN_HEIGHT = int(600)
+        
+        # width of the gameplay screen
+        self.SCREEN_WIDTH = int(800)
+        
+        # fps of the gameplay screen
+        self.FPS = int(60)
+        
+        # The current y-coordinate of the bird character
+        self.bird_y_position = int(300)
+        
+        # The fixed x-coordinate of the bird character
+        self.bird_x_position = int(100)
+        
+        # Height of the bird character
+        self.bird_height = int(25)
+        
+        # Width of the bird character
+        self.bird_width = int(25)
+        
+        # The color of the bird character in RGB format
+        self.bird_color = tuple(tuple((255, 204, 0)))
+        
+        # The velocity at which the bird moves up or down
+        self.bird_velocity = int(5)
+        
+
+
+# the new logic function will be here
+
+
+def main():
+    state_manager = StateManager()
+    running = True
+    while running:
+        event = pygame.event.poll()
+        if event.type == pygame.QUIT:
+            running = False
+        # {function_description}
+        {function_name}(state_manager, event)
+    pygame.quit()
+
+if __name__ == "__main__":
+    pygame.init()
+    main()
+```
+
+Please implement the following request from the game designer and return your answer in the following format:
+```json
+{
+    "function_name": "handle_bird_movement",
+    "function_description": "This function should detect key press events for the up arrow and down arrow keys. On pressing the up arrow key, the bird should move upwards, and on pressing the down arrow key, the bird should move downwards. This function updates the bird's vertical position in state variables.",
+    "function_implementation": "the pygame implementation of the function, including the first line of the function definition",
+}
+```
+
+Here are the dos and don'ts for this request:
+- Note that the implementation of the function shuold only have two arguments (i.e. state_manager and event).
+- The function implementation should involve checking user input with event (i.e. event.type and event.key).
+- Minimize the number of functions added while meeting the game designer's requirements. However, make sure to always give the full implementation of the function.
+- Include only the essential details requested by the game designer. Do not add things that are not requested.
+
+====================
+
+{
+    "function_name": "handle_bird_movement",
+    "function_description": "This function should detect key press events for the up arrow and down arrow keys. On pressing the up arrow key, the bird should move upwards, and on pressing the down arrow key, the bird should move downwards. This function updates the bird's vertical position in state variables.",
+    "function_implementation": "def handle_bird_movement(state_manager, event):\n    if event.type == pygame.KEYDOWN:\n        if event.key == pygame.K_UP:\n            state_manager.bird_y_position -= state_manager.bird_velocity\n        elif event.key == pygame.K_DOWN:\n            state_manager.bird_y_position += state_manager.bird_velocity"
+}

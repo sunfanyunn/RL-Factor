@@ -1,0 +1,116 @@
+The game designer is building a single-player game in Pygame by modeling this game as a Markov Decision Process (MDP).
+There are three types of functions/modules in this game: input event handling, state transition, and UI rendering. 
+- input event handling: functions that detect user input and update the state variables accordingly.
+- state transition: functions that update the state variables according to the game logic.
+- UI rendering: functions that render the state variables as UI components on the screen.
+
+Given a specific feature requested by the game designer, your task is to decide how to implement this feature by decomposing it into the three types of functions/modules mentioned above.
+
+The game already has the following implementation:
+```python
+import pygame
+import sys
+import random
+
+
+class StateManager:
+    def __init__(self):
+        # height of the gameplay screen
+        self.SCREEN_HEIGHT = int(600)
+        
+        # width of the gameplay screen
+        self.SCREEN_WIDTH = int(800)
+        
+        # fps of the gameplay screen
+        self.FPS = int(60)
+        
+        # The current y-coordinate of the bird character
+        self.bird_y_position = int(300)
+        
+        # The fixed x-coordinate of the bird character
+        self.bird_x_position = int(100)
+        
+        # Height of the bird character
+        self.bird_height = int(25)
+        
+        # Width of the bird character
+        self.bird_width = int(25)
+        
+        # The color of the bird character in RGB format
+        self.bird_color = tuple(tuple((255, 204, 0)))
+        
+        # The velocity at which the bird moves up or down
+        self.bird_velocity = int(5)
+        
+
+
+# all the input event handling functions
+
+
+# all the state transitional functions
+
+
+# all the UI rendering functions that govern how state variables are rendered as UI components
+
+
+def main():
+    state_manager = StateManager()
+    running = True
+    while running:
+        event = pygame.event.poll()
+        if event.type == pygame.QUIT:
+            running = False
+        # call all the input event handling functions
+        # call all the state transitional functions
+        # call all the rendering functions
+    pygame.quit()
+
+if __name__ == "__main__":
+    pygame.init()
+    main()
+```
+
+Please provide the answer in the following format within a JSON object:
+```json
+{
+    "input_logic": {
+        "description": "the detailed description of what this function should achieve.",
+        "function_name": "the name of the function to be added",
+    },
+    "state_transition": {
+        "description": "the detailed description of what this function should achieve",
+        "function_name": "the name of the function to be added",
+    },
+    "ui_rendering": {
+        "description": "the detailed description of what this function should achieve",
+        "function_name": "the name of the function to be added",
+    },
+   
+}
+```
+
+The game designer's request is: Create a bird character, visually represented as a simple rectangle, that remains static in the horizontal axis but can move up and down with arrow keys within the game window..
+
+Here are the dos and don'ts for this request:
+- Only give output that pertains to the particular request from the game designer. Do not add things that are not requested. For example, if the game designer asks to "introduce an obstacle", do not add additional logics such as "allow the human player to control the obstacle with arrow keys".
+- Be detailed and specific about what the function should achieve. For example, do not give instructions such as "description": "This function should handle input events relevant to the game.".
+- The resulting JSON should have three keys: "input_logic", "state_transition", and "ui_rendering". Each key should have two keys: "description" and "function_name". The "description" key should have a string value that describes what the function should achieve. The "function_name" key should have a string value that is the name of the function to be added. If the function already exists, this new function will be used in place of the old one.
+- If any particular type of functions is not needed, please leave it as an empty string. It is okay to have empty strings if the function has already been implemented.
+- The state variables are already updated according to the game designer's request. You should not include steps that update the state variables.
+
+====================
+
+{
+    "input_logic": {
+        "description": "This function should detect key press events for the up arrow and down arrow keys. On pressing the up arrow key, the bird should move upwards, and on pressing the down arrow key, the bird should move downwards. This function updates the bird's vertical position in state variables.",
+        "function_name": "handle_bird_movement"
+    },
+    "state_transition": {
+        "description": "This function should ensure that the bird's vertical movement does not go beyond the boundaries of the gameplay screen. If the bird's position is such that moving further up or down would exceed the screen height, the bird's position should be adjusted to stay within the screen limits.",
+        "function_name": "update_bird_position"
+    },
+    "ui_rendering": {
+        "description": "This function should render the bird on the game screen as a rectangle using the current state variables of the bird's position, width, and height. It should also clear the previous frame before drawing the new one.",
+        "function_name": "render_bird"
+    }
+}

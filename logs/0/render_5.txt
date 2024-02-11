@@ -1,0 +1,96 @@
+The game designer is building a single-player game in Pygame by modeling this game as a Markov Decision Process (MDP). Your task is to add rendering functions that decide how state variables are rendered as UI components on the screen, according to the feature requested by the game designer.
+The game has the following implementation already:
+```python
+import pygame
+import sys
+import random
+
+
+class StateManager:
+    def __init__(self):
+        # height of the gameplay screen
+        self.SCREEN_HEIGHT = int(600)
+        
+        # width of the gameplay screen
+        self.SCREEN_WIDTH = int(800)
+        
+        # fps of the gameplay screen
+        self.FPS = int(60)
+        
+        # The current y-coordinate of the bird character
+        self.bird_y_position = int(300)
+        
+        # The fixed x-coordinate of the bird character
+        self.bird_x_position = int(100)
+        
+        # Height of the bird character
+        self.bird_height = int(25)
+        
+        # Width of the bird character
+        self.bird_width = int(25)
+        
+        # The color of the bird character in RGB format
+        self.bird_color = tuple(tuple((255, 204, 0)))
+        
+        # The velocity at which the bird moves up or down
+        self.bird_velocity = int(5)
+        
+
+
+# all the code for the rendering functions
+
+# the new rendering function will be here
+
+def main():
+    state_manager = StateManager()
+    clock = pygame.time.Clock()
+    running = True
+    while running:
+        action = pygame.event.poll()
+        if action.type == pygame.QUIT:
+            running = False
+
+        # all the code for state transitional logics
+        # omitted for brevity
+
+        # Fill the screen with white
+        state_manager.screen.fill((255, 255, 255))
+        # all the code for rendering states as UI components
+        # {function_description}
+        {function_name}(state_manager)
+        pygame.display.flip()
+        state_manager.clock.tick(state_manager.fps)
+
+    pygame.quit()
+
+if __name__ == "__main__":
+    pygame.init()
+    pygame.display.set_caption("")
+    main()
+```
+
+Please implement the following request from the game designer and return your answer in the following format:
+```json
+{
+    "function_name": "render_bird",
+    "function_description": "This function should render the bird on the game screen as a rectangle using the current state variables of the bird's position, width, and height. It should also clear the previous frame before drawing the new one.",
+    "function_implementation": "the pygame implementation of the function, including the first line of the function definition",
+}
+```
+
+Here are the dos and don'ts for this request:
+- Only implement things that pertain to how state variables are rendered as UI components on the screen. Other aspects like input event handling and state transition will be handled separately.
+- Please make sure that all of the state variables remain unchanged in the rendering functions.
+- Minimize the number of functions to add while meeting the game designer's requirements.
+- Include only the essential details requested by the game designer. Do not add things that are not requested.
+- These rendering functions will be called in every iteration of the main game loop. If you want to add a conditional logic to the function, please implement it in the function itself.
+- Note that the background color of the screen is white so white UI components will not be visible. Do not fill the screen with white again in the rendering functions.
+- Note that the new function will be added to the end of the list of rendering functions.
+
+====================
+
+{
+    "function_name": "render_bird",
+    "function_description": "This function should render the bird on the game screen as a rectangle using the current state variables of the bird's position, width, height, and color. It should also clear the previous frame before drawing the new one.",
+    "function_implementation": "def render_bird(state_manager):\n    # Clear the previous frame (handled in main game loop)\n    # Draw the bird as a rectangle\n    bird_rect = pygame.Rect(state_manager.bird_x_position, state_manager.bird_y_position, state_manager.bird_width, state_manager.bird_height)\n    pygame.draw.rect(state_manager.screen, state_manager.bird_color, bird_rect)"
+}

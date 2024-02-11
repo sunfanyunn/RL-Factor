@@ -1,0 +1,88 @@
+The game designer is building a single-player game in Pygame by modeling this game as a Markov Decision Process (MDP). Your task is to define and code new state transition functions according to the feature requested by the game designer.
+The game has the following implementation already:
+```python
+import pygame
+import sys
+import random
+
+
+class StateManager:
+    def __init__(self):
+        # height of the gameplay screen
+        self.SCREEN_HEIGHT = int(600)
+        
+        # width of the gameplay screen
+        self.SCREEN_WIDTH = int(800)
+        
+        # fps of the gameplay screen
+        self.FPS = int(60)
+        
+        # Indicates whether the game is currently active or not. Used to check game over condition upon collision or out-of-bounds.
+        self.game_active = bool(True)
+        
+        # Vertical space between the upper and lower pipes
+        self.pipe_gap = int(150)
+        
+        # List of positions of pipe pairs, where each pair is a dictionary with x, upper_y, and lower_y
+        self.pipes_list = list([{'x': 800, 'upper_y': 0, 'lower_y': 350}])
+        
+        # The color of the game over text in RGB format, ensuring visibility over the background.
+        self.game_over_text_color = tuple(tuple((255, 0, 0)))
+        
+        # The x and y coordinates of the location where the game over text should be displayed
+        self.game_over_text_position = tuple(tuple((self.SCREEN_WIDTH / 2, self.SCREEN_HEIGHT / 2)))
+        
+        # The font size of the game over text
+        self.game_over_text_size = int(32)
+        
+        # The current y-coordinate of the bird character
+        self.bird_y_position = int(300)
+        
+        # The current vertical velocity of the bird considering gravity
+        self.bird_vertical_velocity = float(0.0)
+        
+
+
+# the new function will be here
+
+
+
+def main():
+    state_manager = StateManager()
+    running = True
+    while running:
+        event = pygame.event.poll()
+        if event.type == pygame.QUIT:
+            running = False
+        # {function_description}
+        {function_name}(state_manager)
+    pygame.quit()
+
+if __name__ == "__main__":
+    pygame.init()
+    main()
+```
+
+Please implement the following request from the game designer and return your answer in the following format:
+```json
+{
+    "function_name": "stop_all_motion",
+    "function_description": "This function should halt all movement in the game when the game_active variable is False. This includes stopping bird movement and pipe scrolling.",
+    "function_implementation": "the pygame implementation of the function, including the first line of the function definition",
+}
+```
+
+Here are the dos and don'ts for this request:
+- Only implement things that pertain to updating the state variables. Other aspects of the game like input event handling and UI components will be handled separately.
+- Minimize the number of functions added while meeting the game designer's requirements.
+- Include only the essential details requested by the game designer. Do not add things that are not requested.
+- These state transition functions will be called in every iteration of the main game loop. If you want to add a conditional logic to the function, please implement it in the function itself.
+- Note that the new function will be added to the end of the list of state transition functions.
+
+====================
+
+{
+    "function_name": "stop_all_motion",
+    "function_description": "This function should halt all movement in the game when the game_active variable is False. This includes stopping bird movement and pipe scrolling.",
+    "function_implementation": "def stop_all_motion(state_manager):\n    if not state_manager.game_active:\n        state_manager.bird_vertical_velocity = 0\n        for pipe in state_manager.pipes_list:\n            pipe['x'] = pipe['x']  # This line effectively stops the pipe from moving\n"
+}

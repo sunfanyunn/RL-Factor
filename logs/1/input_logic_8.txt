@@ -1,0 +1,92 @@
+The game designer is building a single-player game in Pygame by modeling this game as a Markov Decision Process (MDP). Your task is to detect key/mouse input and update the state variables accordingly according to a feature requested by the game designer.
+The game has the following implementation already:
+```python
+import pygame
+import sys
+import random
+
+
+class StateManager:
+    def __init__(self):
+        # height of the gameplay screen
+        self.SCREEN_HEIGHT = int(600)
+        
+        # width of the gameplay screen
+        self.SCREEN_WIDTH = int(800)
+        
+        # fps of the gameplay screen
+        self.FPS = int(60)
+        
+        # The current y-coordinate of the bird character
+        self.bird_y_position = int(300)
+        
+        # The fixed x-coordinate of the bird character
+        self.bird_x_position = int(100)
+        
+        # Height of the bird character
+        self.bird_height = int(25)
+        
+        # Width of the bird character
+        self.bird_width = int(25)
+        
+        # The color of the bird character in RGB format
+        self.bird_color = tuple(tuple((255, 204, 0)))
+        
+        # The velocity at which the bird moves up or down
+        self.bird_velocity = int(5)
+        
+        # The acceleration due to gravity affecting the bird
+        self.gravity = float(0.2)
+        
+        # The current vertical velocity of the bird considering gravity
+        self.bird_vertical_velocity = float(0.0)
+        
+        # The value by which the bird's vertical velocity increases when the player inputs a flap
+        self.flap_power = float(-5.0)
+        
+        # The terminal velocity of the bird (the maximum speed at which the bird can fall)
+        self.terminal_velocity = float(10.0)
+        
+
+
+# the new logic function will be here
+
+
+def main():
+    state_manager = StateManager()
+    running = True
+    while running:
+        event = pygame.event.poll()
+        if event.type == pygame.QUIT:
+            running = False
+        # {function_description}
+        {function_name}(state_manager, event)
+    pygame.quit()
+
+if __name__ == "__main__":
+    pygame.init()
+    main()
+```
+
+Please implement the following request from the game designer and return your answer in the following format:
+```json
+{
+    "function_name": "handle_bird_flap",
+    "function_description": "Modify the bird's vertical velocity by a certain amount upwards when the user inputs a flap (up arrow key), counteracting gravity. When the up arrow is pressed, increase bird's vertical velocity by the flap power value.",
+    "function_implementation": "the pygame implementation of the function, including the first line of the function definition",
+}
+```
+
+Here are the dos and don'ts for this request:
+- Note that the implementation of the function shuold only have two arguments (i.e. state_manager and event).
+- The function implementation should involve checking user input with event (i.e. event.type and event.key).
+- Minimize the number of functions added while meeting the game designer's requirements. However, make sure to always give the full implementation of the function.
+- Include only the essential details requested by the game designer. Do not add things that are not requested.
+
+====================
+
+{
+    "function_name": "handle_bird_flap",
+    "function_description": "Modify the bird's vertical velocity by a certain amount upwards when the user inputs a flap (up arrow key), counteracting gravity. When the up arrow is pressed, increase bird's vertical velocity by the flap power value.",
+    "function_implementation": "def handle_bird_flap(state_manager, event):\n    if event.type == pygame.KEYDOWN and event.key == pygame.K_UP:\n        state_manager.bird_vertical_velocity += state_manager.flap_power"
+}

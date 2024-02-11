@@ -1,0 +1,97 @@
+The game designer is building a single-player game in Pygame by modeling this game as a Markov Decision Process (MDP). Your task is to define and code new state transition functions according to the feature requested by the game designer.
+The game has the following implementation already:
+```python
+import pygame
+import sys
+import random
+
+
+class StateManager:
+    def __init__(self):
+        # height of the gameplay screen
+        self.SCREEN_HEIGHT = int(600)
+        
+        # width of the gameplay screen
+        self.SCREEN_WIDTH = int(800)
+        
+        # fps of the gameplay screen
+        self.FPS = int(60)
+        
+        # The current y-coordinate of the bird character
+        self.bird_y_position = int(300)
+        
+        # The x-coordinate for the rightmost position to start drawing pipes
+        self.pipe_spawn_x = int(800)
+        
+        # Width of each pipe
+        self.pipe_width = int(50)
+        
+        # List of positions of pipe pairs, where each pair is a dictionary with x, upper_y, and lower_y
+        self.pipes_list = list([{'x': 800, 'upper_y': 0, 'lower_y': 350}])
+        
+        # The score of the player, representing the number of pipes successfully passed
+        self.score = int(0)
+        
+        # The color of the score text in RGB format, ensuring visibility over the background
+        self.score_text_color = tuple(tuple((0, 0, 0)))
+        
+        # The font size of the score text
+        self.score_font_size = int(30)
+        
+        # The x-coordinate for where to display the score on the screen
+        self.score_position_x = int(740)
+        
+        # The y-coordinate for where to display the score on the screen
+        self.score_position_y = int(50)
+        
+        # The fixed x-coordinate of the bird character
+        self.bird_x_position = int(100)
+        
+        # The fixed horizontal distance from the bird to the pipes to check for score update
+        self.scoring_line_x = int(150)
+        
+
+
+# the new function will be here
+
+
+
+def main():
+    state_manager = StateManager()
+    running = True
+    while running:
+        event = pygame.event.poll()
+        if event.type == pygame.QUIT:
+            running = False
+        # {function_description}
+        {function_name}(state_manager)
+    pygame.quit()
+
+if __name__ == "__main__":
+    pygame.init()
+    main()
+```
+
+Please implement the following request from the game designer and return your answer in the following format:
+```json
+{
+    "function_name": "update_score",
+    "function_description": "This function updates the player's score when the bird passes a pair of pipes. It checks the bird's x-coordinate against the pipe's x-coordinate plus its width. If the bird's x-coordinate is greater than this sum and the pipe has not already been scored (determined by the 'scored' flag in the pipe dictionary), it increments the player's score and sets the 'scored' flag to True.",
+    "function_implementation": "the pygame implementation of the function, including the first line of the function definition",
+}
+```
+
+Here are the dos and don'ts for this request:
+- Only implement things that pertain to updating the state variables. Other aspects of the game like input event handling and UI components will be handled separately.
+- Minimize the number of functions added while meeting the game designer's requirements.
+- Include only the essential details requested by the game designer. Do not add things that are not requested.
+- These state transition functions will be called in every iteration of the main game loop. If you want to add a conditional logic to the function, please implement it in the function itself.
+- Note that the new function will be added to the end of the list of state transition functions.
+
+====================
+
+{
+    "function_name": "update_score",
+    "function_description": "This function updates the player's score when the bird passes a pair of pipes. It checks the bird's x-coordinate against the pipe's x-coordinate plus its width. If the bird's x-coordinate is greater than this sum and the pipe has not already been scored (determined by the 'scored' flag in the pipe dictionary), it increments the player's score and sets the 'scored' flag to True.",
+    "function_implementation": "def update_score(state_manager):\n    for pipe in state_manager.pipes_list:\n        if not pipe.get('scored', False) and state_manager.bird_x_position > pipe['x'] + state_manager.pipe_width:\n            state_manager.score += 1\n            pipe['scored'] = True\n"
+}
