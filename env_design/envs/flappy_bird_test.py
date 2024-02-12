@@ -1,5 +1,5 @@
-import os
-os.environ["SDL_VIDEODRIVER"] = "dummy"
+#import os
+#os.environ["SDL_VIDEODRIVER"] = "dummy"
 import pygame
 import random
 
@@ -7,16 +7,16 @@ import random
 class StateManager:
     def __init__(self):
         # Initialize state variables directly
-        self.SCREEN_WIDTH = 128
-        self.SCREEN_HEIGHT = 128
-        self.PIPE_WIDTH = 10
-        self.PIPE_GAP = 50
+        self.SCREEN_WIDTH = 84
+        self.SCREEN_HEIGHT = 84
+        self.PIPE_WIDTH = 5
+        self.PIPE_GAP = 30
 
         self.bird_position_x = 10
         self.bird_position_y = 15
         self.bird_size = 5
         self.score = 0
-        self.pipe_positions = [{"x": 80, "y": 80, "counted": False}]
+        self.pipe_positions = [{"x": 50, "y": 50, "counted": False}]
 
         self.jump_velocity = -20
         self.gravity = 1
@@ -49,7 +49,7 @@ def render(state_manager):
             ),
         )
 
-    font = pygame.font.Font(None, 36)
+    font = pygame.font.Font(None, 12)
     score_text = font.render(f"Score: {state_manager.score}", True, (0, 0, 0))
     state_manager.screen.blit(score_text, (10, 10))
 
