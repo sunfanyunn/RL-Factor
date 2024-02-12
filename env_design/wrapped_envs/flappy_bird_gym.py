@@ -39,11 +39,11 @@ class PygameEnv(gym.Env):
         # Execute one time step within the environment
         event = self.perform_action(action)
         running = self.game.run(event)
-        for _ in range(5):
-            event = pygame.event.poll()
-            running = self.game.run(event)
-            if not running:
-              break
+        #for _ in range(5):
+        #    event = pygame.event.poll()
+        #    running = self.game.run(event)
+        #    if not running:
+        #        break
 
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
         if running:
@@ -57,7 +57,7 @@ class PygameEnv(gym.Env):
 
     def reset(self, *, seed=None, options=None):
         self.game.reset()
-        running = self.game.run(pygame.event.Event(pygame.NOEVENT))
+        self.game.run(pygame.event.Event(pygame.NOEVENT))
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
         info = {}  # Additional info for debugging
         return observation, info
@@ -68,18 +68,17 @@ if __name__ == "__main__":
     #observation, info = env.reset()
     observation = env.reset()
 
+    import imageio
+    i = 0
     done = False
     total_reward = 0
     while not done:
         # action = env.action_space.sample()
         action = int(input())
         observation, reward, done, info = env.step(action)
-        total_reward += reward
-        # assert there is no nan or Inf in observation
-        assert not np.any(np.isnan(observation))
-        assert not np.any(np.isinf(observation))
-        print(total_reward)
-
-
+        imageio.imsave(f"logs/test{i}.png", observation)
+        print(observation.shape, reward)
+        print(reward)
+        i += 1
     pygame.quit()
     env.close()

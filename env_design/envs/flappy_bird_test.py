@@ -7,18 +7,18 @@ import random
 class StateManager:
     def __init__(self):
         # Initialize state variables directly
-        self.SCREEN_WIDTH = 240
-        self.SCREEN_HEIGHT = 320
+        self.SCREEN_WIDTH = 128
+        self.SCREEN_HEIGHT = 128
         self.PIPE_WIDTH = 10
         self.PIPE_GAP = 50
 
-        self.bird_position_x = 100
-        self.bird_position_y = 150
-        self.bird_size = 10
+        self.bird_position_x = 10
+        self.bird_position_y = 15
+        self.bird_size = 5
         self.score = 0
-        self.pipe_positions = [{"x": 480, "y": 100, "counted": False}]
+        self.pipe_positions = [{"x": 80, "y": 80, "counted": False}]
 
-        self.jump_velocity = -30
+        self.jump_velocity = -20
         self.gravity = 1
         self.game_over = False
 
@@ -114,23 +114,12 @@ def pipe_logic(state_manager):
         new_pipe = {
             "x": state_manager.SCREEN_WIDTH,
             "y": random.randint(
-                50,
-                state_manager.SCREEN_HEIGHT- state_manager.PIPE_GAP - 50,
+                state_manager.bird_size + state_manager.PIPE_GAP,
+                state_manager.SCREEN_HEIGHT,
             ),
             "counted": False,
         }
         state_manager.pipe_positions.append(new_pipe)
-
-        for _ in range(4):
-            new_pipe = {
-                "x": new_pipe["x"] + 250,
-                "y": random.randint(
-                    50,
-                    state_manager.SCREEN_HEIGHT - state_manager.PIPE_GAP - 50,
-                ),
-                "counted": False,
-            }
-            state_manager.pipe_positions.append(new_pipe)
 
 
 def game_over_logic(state_manager):
@@ -140,10 +129,10 @@ def game_over_logic(state_manager):
         state_manager.game_over = True
 
     if state_manager.game_over:
-        font = pygame.font.Font(None, 72)
+        font = pygame.font.Font(None, 12)
         game_over_text = font.render("Game Over", True, (0, 0, 0))
         state_manager.screen.blit(game_over_text, (250, 250))
-        pygame.display.flip()
+        pygame.display.update()
         pygame.time.wait(2000)
         return False
     return True
