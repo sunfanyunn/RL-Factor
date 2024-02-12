@@ -1,5 +1,5 @@
-#import os
-#os.environ["SDL_VIDEODRIVER"] = "dummy"
+import os
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 import pygame
 import sys
 import random
@@ -54,7 +54,7 @@ def render(state_manager):
     score_text = font.render(f"Score: {state_manager.score}", True, (0, 0, 0))
     state_manager.screen.blit(score_text, (10, 10))
 
-    pygame.display.flip()
+    pygame.display.update()
     state_manager.clock.tick(60)
 
 

@@ -34,28 +34,30 @@ class PygameEnv(gym.Env):
             return pygame.event.Event(pygame.MOUSEBUTTONDOWN)
         else:
             return pygame.event.Event(pygame.NOEVENT)
-        
+
     def step(self, action):
         # Execute one time step within the environment
         event = self.perform_action(action)
         running = self.game.run(event)
-        for _ in range(5):
-            event = pygame.event.poll()
-            running = self.game.run(event)
-            if not running:
-                break
+        #for _ in range(5):
+        #    event = pygame.event.poll()
+        #    running = self.game.run(event)
+        #    if not running:
+        #      break
 
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
-        reward = self.get_reward()
-        terminated = not running 
+        if running:
+            reward = self.get_reward() + 0.01
+        else:
+            reward = -1
+        terminated = not running
         truncated = False
         info = {}  # Additional info for debugging
         return observation, reward, terminated, info
-    
+
     def reset(self, *, seed=None, options=None):
         self.game.reset()
         running = self.game.run(pygame.event.Event(pygame.NOEVENT))
-        pygame.display.flip()
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
         info = {}  # Additional info for debugging
         return observation
@@ -63,13 +65,21 @@ class PygameEnv(gym.Env):
 
 if __name__ == "__main__":
     env = PygameEnv()
+    #observation, info = env.reset()
     observation = env.reset()
-    print(observation.shape, observation.dtype)
 
     done = False
+    total_reward = 0
     while not done:
+        # action = env.action_space.sample()
         action = int(input())
         observation, reward, done, info = env.step(action)
-        print(observation.shape)
+        total_reward += reward
+        # assert there is no nan or Inf in observation
+        assert not np.any(np.isnan(observation))
+        assert not np.any(np.isinf(observation))
+        print(total_reward)
+
+
     pygame.quit()
     env.close()

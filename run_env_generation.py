@@ -7,6 +7,8 @@ import sys
 from game_structure import GameRep
 from openai import OpenAI
 from ray.rllib.algorithms.ppo import PPOConfig
+import ray
+ray.init(log_to_driver=False)
 
 
 if __name__ == "__main__":
@@ -58,30 +60,50 @@ if __name__ == "__main__":
             },
         )
         # Parallelize environment rollouts.
-        .rollouts(num_rollout_workers=3)
+        .rollouts(num_rollout_workers=8)
+        .debugging(
+            logger_config={
+                # Provide the class directly or via fully qualified class
+                # path.
+                # "type": MyPrintLogger,
+                # `config` keys:
+                # "prefix": "ABC",
+                # Optional: Custom logdir (do not define this here
+                # for using ~/ray_results/...).
+                "logdir": "./results"
+            }
+        )
+        # Use GPUs iff `RLLIB_NUM_GPUS` env var set to > 0.
+        .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "8")))
     )
+    def evaluate():
+        env = PygameEnv()
+        # Get the initial observation (some value between -10.0 and 10.0).
+        obs = env.reset()
+        done = False
+        total_reward = 0.0
+        # Play one episode.
+        while not done:
+            # Compute a single action, given the current observation
+            # from the environment.
+            action = algo.compute_single_action(obs)
+            # Apply the computed action in the environment.
+            obs, reward, done, info = env.step(action)
+            print(reward)
+            # Sum up rewards for reporting purposes.
+            total_reward += reward
+        # Report results.
+        print(f"Shreaked for 1 episode; total-reward={total_reward}")
+
     # Use the config's `build()` method to construct a PPO object.
     algo = config.build()
-
+    evaluate()
+    evaluate()
+    evaluate()
     # Train for n iterations and report results (mean episode rewards).
     for iteration in range(100000):
         results = algo.train()
+        evaluate()
         print(f"Iter: {iteration}; avg. reward={results['episode_reward_mean']}")
 
-        if iteration % 100 == 0:
-            env = PygameEnv()
-            # Get the initial observation (some value between -10.0 and 10.0).
-            obs, info = env.reset()
-            terminated = truncated = False
-            total_reward = 0.0
-            # Play one episode.
-            while not terminated and not truncated:
-                # Compute a single action, given the current observation
-                # from the environment.
-                action = algo.compute_single_action(obs)
-                # Apply the computed action in the environment.
-                obs, reward, terminated, truncated, info = env.step(action)
-                # Sum up rewards for reporting purposes.
-                total_reward += reward
-            # Report results.
-            print(f"Shreaked for 1 episode; total-reward={total_reward}")
+        #if iteration % 100 == 0:
