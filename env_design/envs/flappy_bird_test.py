@@ -1,7 +1,6 @@
 import os
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 import pygame
-import sys
 import random
 
 

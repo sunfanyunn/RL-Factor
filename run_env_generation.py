@@ -2,6 +2,7 @@ import pickle
 import importlib
 import json
 import argparse
+import gymnasium as gym
 import os
 import sys
 from game_structure import GameRep
@@ -48,38 +49,27 @@ if __name__ == "__main__":
             f.write(code)
 
     from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
+    #import flappy_bird_gymnasium
+    #from flappy_bird_gymnasium import FlappyBirdEnv
+    from ray.tune.registry import register_env
+    from ray.rllib.algorithms import ppo
+
+    def env_creator(env_config):
+        return PygameEnv()  # return an env instance
+    register_env("my_env", env_creator)
+
     # Create an RLlib Algorithm instance from a PPOConfig to learn how to
     # act in the above environment.
-    config = (
-        PPOConfig()
-        .environment(
-            # Env class to use (here: our gym.Env sub-class from above).
-            env=PygameEnv,
-            # Config dict to be passed to our custom env's constructor.
-            env_config={
-            },
-        )
-        # Parallelize environment rollouts.
-        .rollouts(num_rollout_workers=8)
-        .debugging(
-            logger_config={
-                # Provide the class directly or via fully qualified class
-                # path.
-                # "type": MyPrintLogger,
-                # `config` keys:
-                # "prefix": "ABC",
-                # Optional: Custom logdir (do not define this here
-                # for using ~/ray_results/...).
-                "logdir": "./results"
-            }
-        )
-        # Use GPUs iff `RLLIB_NUM_GPUS` env var set to > 0.
-        .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "8")))
+    algo = ppo.PPO(
+        env="my_env",
+        config={
+        },
     )
+
     def evaluate():
         env = PygameEnv()
         # Get the initial observation (some value between -10.0 and 10.0).
-        obs = env.reset()
+        obs, info = env.reset()
         done = False
         total_reward = 0.0
         # Play one episode.
@@ -88,7 +78,7 @@ if __name__ == "__main__":
             # from the environment.
             action = algo.compute_single_action(obs)
             # Apply the computed action in the environment.
-            obs, reward, done, info = env.step(action)
+            obs, reward, done, truncated, info = env.step(action)
             print(reward)
             # Sum up rewards for reporting purposes.
             total_reward += reward
@@ -96,9 +86,7 @@ if __name__ == "__main__":
         print(f"Shreaked for 1 episode; total-reward={total_reward}")
 
     # Use the config's `build()` method to construct a PPO object.
-    algo = config.build()
-    evaluate()
-    evaluate()
+    # algo = config.build()
     evaluate()
     # Train for n iterations and report results (mean episode rewards).
     for iteration in range(100000):

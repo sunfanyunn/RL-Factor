@@ -39,11 +39,11 @@ class PygameEnv(gym.Env):
         # Execute one time step within the environment
         event = self.perform_action(action)
         running = self.game.run(event)
-        #for _ in range(5):
-        #    event = pygame.event.poll()
-        #    running = self.game.run(event)
-        #    if not running:
-        #      break
+        for _ in range(5):
+            event = pygame.event.poll()
+            running = self.game.run(event)
+            if not running:
+              break
 
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
         if running:
@@ -53,14 +53,14 @@ class PygameEnv(gym.Env):
         terminated = not running
         truncated = False
         info = {}  # Additional info for debugging
-        return observation, reward, terminated, info
+        return observation, reward, terminated, truncated, info
 
     def reset(self, *, seed=None, options=None):
         self.game.reset()
         running = self.game.run(pygame.event.Event(pygame.NOEVENT))
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
         info = {}  # Additional info for debugging
-        return observation
+        return observation, info
 
 
 if __name__ == "__main__":
