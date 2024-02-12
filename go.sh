@@ -1,3 +1,13 @@
 #!/bin/bash 
-export TUNE_RESULT_DIR=./results
-python run_env_generation.py
+
+### skip over the envrionemtnal generation part for now
+# find yours here: https://platform.openai.com/api-keys
+# export OPENAI_API_KEY=
+# python run_env_generation.py
+
+
+# find your wandb api key here: https://wandb.ai/authorize
+export WANDB_API_KEY=
+
+### rl training
+python rl_trainer.py --wandb --num_gpus 1

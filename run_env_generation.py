@@ -7,10 +7,11 @@ import os
 import sys
 from game_structure import GameRep
 from openai import OpenAI
-from ray.rllib.algorithms.ppo import PPOConfig
-import ray
-ray.init(log_to_driver=False)
+from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
+#from flappy_bird_gymnasium import FlappyBirdEnv
 
+def env_creator(env_config):
+    return PygameEnv()  # return an env instance
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Game Parameters')
@@ -28,11 +29,7 @@ if __name__ == "__main__":
         game_template = args.game_template
         debug_mode = args.debug_mode
 
-        #api_key_path = '/ccn2/u/locross/llmv_marl/llm_plan/lc_api_key.json'
-        api_key_path = '/Users/locro/Documents/Stanford/lc_api_key.json'
-        OPENAI_KEYS = json.load(open(api_key_path, 'r'))
-        api_key = OPENAI_KEYS['API_KEY']
-        client = OpenAI(api_key=api_key)
+        client = OpenAI()
 
         game = GameRep(log_dir=args.log_dir, debug_mode=debug_mode, client=client)
         pass_test, error_msg = game.pass_sanity_check()
@@ -48,50 +45,4 @@ if __name__ == "__main__":
         with open(implementation_path, "w") as f:
             f.write(code)
 
-    from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
-    #import flappy_bird_gymnasium
-    #from flappy_bird_gymnasium import FlappyBirdEnv
-    from ray.tune.registry import register_env
-    from ray.rllib.algorithms import ppo
-
-    def env_creator(env_config):
-        return PygameEnv()  # return an env instance
     register_env("my_env", env_creator)
-
-    # Create an RLlib Algorithm instance from a PPOConfig to learn how to
-    # act in the above environment.
-    algo = ppo.PPO(
-        env="my_env",
-        config={
-        },
-    )
-
-    def evaluate():
-        env = PygameEnv()
-        # Get the initial observation (some value between -10.0 and 10.0).
-        obs, info = env.reset()
-        done = False
-        total_reward = 0.0
-        # Play one episode.
-        while not done:
-            # Compute a single action, given the current observation
-            # from the environment.
-            action = algo.compute_single_action(obs)
-            # Apply the computed action in the environment.
-            obs, reward, done, truncated, info = env.step(action)
-            print(reward)
-            # Sum up rewards for reporting purposes.
-            total_reward += reward
-        # Report results.
-        print(f"Shreaked for 1 episode; total-reward={total_reward}")
-
-    # Use the config's `build()` method to construct a PPO object.
-    # algo = config.build()
-    evaluate()
-    # Train for n iterations and report results (mean episode rewards).
-    for iteration in range(100000):
-        results = algo.train()
-        evaluate()
-        print(f"Iter: {iteration}; avg. reward={results['episode_reward_mean']}")
-
-        #if iteration % 100 == 0:

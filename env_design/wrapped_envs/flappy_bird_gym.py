@@ -66,7 +66,7 @@ class PygameEnv(gym.Env):
 if __name__ == "__main__":
     env = PygameEnv()
     #observation, info = env.reset()
-    observation = env.reset()
+    observation, _ = env.reset()
 
     import imageio
     i = 0
@@ -75,7 +75,7 @@ if __name__ == "__main__":
     while not done:
         # action = env.action_space.sample()
         action = int(input())
-        observation, reward, done, info = env.step(action)
+        observation, reward, done, truncated, info = env.step(action)
         imageio.imsave(f"logs/test{i}.png", observation)
         print(observation.shape, reward)
         print(reward)
