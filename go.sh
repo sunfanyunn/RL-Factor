@@ -10,4 +10,4 @@
 export WANDB_API_KEY=
 
 ### rl training
-python rl_trainer.py --wandb --num_gpus 1
+python rl_trainer.py --exp flappy_bird_new --wandb --num_gpus 4 --num_workers 100

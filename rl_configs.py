@@ -149,6 +149,5 @@ def get_experiment_config(args, default_config):
         experiment_configs['dir'] = f"{params_dict['results_dir']}/tf"
     else:
         experiment_configs['dir'] = f"{params_dict['results_dir']}/torch"
-    # os.makedirs(experiment_configs['dir'], exist_ok=True)
-        
+
     return run_configs, experiment_configs, tune_configs

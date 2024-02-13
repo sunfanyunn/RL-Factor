@@ -157,7 +157,7 @@ if __name__ == "__main__":
 
   ray.init(local_mode=args.local, ignore_reinit_error=True)
   ### for some reason, I have to set the following line, otherwiseI will get "URI has empty scheme"
-  exp_config['dir'] = None
+  # exp_config['dir'] = None
 
   # Setup hyper-parameter optimization configs here
   # if not args.no_tune:
@@ -186,7 +186,7 @@ if __name__ == "__main__":
       run_config=air.RunConfig(
         name=exp_config['name'], 
         callbacks=wdb_callbacks,
-        local_dir=exp_config['dir'], 
+        # local_dir=exp_config['dir'], 
         stop=exp_config['stop'], 
         checkpoint_config=ckpt_config, 
         verbose=3),
