@@ -47,7 +47,7 @@ class PygameEnv(gym.Env):
 
         observation = pygame.surfarray.array3d(self.game.state_manager.screen)
         if running:
-            reward = self.get_reward() + 0.01
+            reward = self.get_reward() + 0.1
         else:
             reward = -1
         terminated = not running

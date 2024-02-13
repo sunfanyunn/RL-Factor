@@ -32,16 +32,16 @@ def get_experiment_config(args, default_config):
         "framework": args.framework,
 
         # agent model
-        "fcnet_hidden": (4, 4),
-        "post_fcnet_hidden": (16,),
-        "cnn_activation": "relu",
-        "fcnet_activation": "relu",
-        "post_fcnet_activation": "relu",
-        "use_lstm": True,
-        "lstm_use_prev_action": True,
-        "lstm_use_prev_reward": False,
-        "lstm_cell_size": 2,
-        "shared_policy": False,
+        #"fcnet_hidden": (4, 4),
+        #"post_fcnet_hidden": (16,),
+        #"cnn_activation": "relu",
+        #"fcnet_activation": "relu",
+        #"post_fcnet_activation": "relu",
+        #"use_lstm": True,
+        #"lstm_use_prev_action": True,
+        #"lstm_use_prev_reward": False,
+        #"lstm_cell_size": 2,
+        #"shared_policy": False,
 
         # experiment trials
         "exp_name": args.exp,
@@ -122,16 +122,16 @@ def get_experiment_config(args, default_config):
     #                                                               player_to_agent[agent_id]))    
     # Agent NN Model
     # Fully connect network with number of hidden layers to be used.
-    run_configs.model["fcnet_hiddens"] = params_dict['fcnet_hidden']
-    # Post conv fcnet with number of hidden layers to be used.
-    run_configs.model["post_fcnet_hiddens"] = params_dict['post_fcnet_hidden']
-    run_configs.model["conv_activation"] = params_dict['cnn_activation'] 
-    run_configs.model["fcnet_activation"] = params_dict['fcnet_activation']
-    run_configs.model["post_fcnet_activation"] = params_dict['post_fcnet_activation']
-    run_configs.model["use_lstm"] = params_dict['use_lstm']
-    run_configs.model["lstm_use_prev_action"] = params_dict['lstm_use_prev_action']
-    run_configs.model["lstm_use_prev_reward"] = params_dict['lstm_use_prev_reward']
-    run_configs.model["lstm_cell_size"] = params_dict['lstm_cell_size']
+    #run_configs.model["fcnet_hiddens"] = params_dict['fcnet_hidden']
+    ## Post conv fcnet with number of hidden layers to be used.
+    #run_configs.model["post_fcnet_hiddens"] = params_dict['post_fcnet_hidden']
+    #run_configs.model["conv_activation"] = params_dict['cnn_activation'] 
+    #run_configs.model["fcnet_activation"] = params_dict['fcnet_activation']
+    #run_configs.model["post_fcnet_activation"] = params_dict['post_fcnet_activation']
+    #run_configs.model["use_lstm"] = params_dict['use_lstm']
+    #run_configs.model["lstm_use_prev_action"] = params_dict['lstm_use_prev_action']
+    #run_configs.model["lstm_use_prev_reward"] = params_dict['lstm_use_prev_reward']
+    #run_configs.model["lstm_cell_size"] = params_dict['lstm_cell_size']
     """ Adding hyper-parameter to search """
 
     # ray air.RunConfig
@@ -149,6 +149,6 @@ def get_experiment_config(args, default_config):
         experiment_configs['dir'] = f"{params_dict['results_dir']}/tf"
     else:
         experiment_configs['dir'] = f"{params_dict['results_dir']}/torch"
-    os.makedirs(experiment_configs['dir'], exist_ok=True)
+    # os.makedirs(experiment_configs['dir'], exist_ok=True)
         
     return run_configs, experiment_configs, tune_configs

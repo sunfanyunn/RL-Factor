@@ -53,7 +53,6 @@ def get_cli_args():
   parser.add_argument(
       "--exp",
       type=str,
-      choices = [],
       default="",
       help="Name of the substrate to run",
   )
@@ -123,9 +122,6 @@ if __name__ == "__main__":
     configs, exp_config, tune_config = get_experiment_config(args, default_config)
   elif args.algo == "icm":
     assert False
-    #assert args.num_workers == 0, "ICM does not support multi-worker training."
-    from icm_configs import get_experiment_icm_config
-    configs, exp_config, tune_config = get_experiment_icm_config(args, default_config)
   else:
      print('The selected option is not tested. You may encounter issues if you use the baseline \
            policy configurations with non-tested algorithms')
