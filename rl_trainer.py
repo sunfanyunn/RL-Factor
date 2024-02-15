@@ -7,15 +7,13 @@ import ray
 from typing import *
 from ray import air
 from ray import tune
-from ray.rllib.algorithms import ppo
 from ray.tune import registry
 from ray.air.integrations.wandb import WandbLoggerCallback
 
 
 def get_cli_args():
-  
+
   parser = argparse.ArgumentParser(description="Training Script for Multi-Agent RL in Meltingpot")
-  
   parser.add_argument(
       "--num_workers",
       type=int,
@@ -40,7 +38,7 @@ def get_cli_args():
   )
   parser.add_argument(
         "--algo",
-        choices=["ppo", "icm"],
+        choices=["ppo", "impala", "icm"],
         default="ppo",
         help="Algorithm to train agents.",
   )
@@ -74,7 +72,7 @@ def get_cli_args():
         default="INFO",
         help="The level of training and data flow messages to print.",
   )
-  
+
   parser.add_argument(
         "--wandb",
         action="store_true",
@@ -86,7 +84,7 @@ def get_cli_args():
   parser.add_argument(
         "--downsample",
         type=bool,
-        default=True,
+        default=False,
         help="Whether to downsample substrates in MeltingPot. Defaults to 8.",
   )
 
@@ -112,21 +110,31 @@ if __name__ == "__main__":
 
   # initialize default configurations for native RLlib algorithms (we use one solver 
   # all exploration modules)  
-  trainer = "PPO"
-  default_config = ppo.PPOConfig()
+
   if args.algo == "ppo":    
     # Fetch experiment configurations
     #from configs import get_experiment_config
     # hyperparameter search
+    trainer = "PPO"
+    from ray.rllib.algorithms import ppo
+    default_config = ppo.PPOConfig()
     from rl_configs import get_experiment_config
     configs, exp_config, tune_config = get_experiment_config(args, default_config)
+
+  elif args.algo == "impala":
+    trainer = "IMPALA"
+    from ray.rllib.algorithms import impala
+    default_config = impala.ImpalaConfig()
+    from rl_configs import get_experiment_config
+    configs, exp_config, tune_config = get_experiment_config(args, default_config)
+
   elif args.algo == "icm":
     assert False
   else:
      print('The selected option is not tested. You may encounter issues if you use the baseline \
            policy configurations with non-tested algorithms')
  
-  
+
   # Ensure GPU is available if set to True
   if configs.num_gpus > 0:
      import torch
@@ -155,45 +163,49 @@ if __name__ == "__main__":
     wdb_callbacks = []
     print("WARNING! No wandb API key found, running without wandb!")
 
-  ray.init(local_mode=args.local, ignore_reinit_error=True)
+  ### I changed the _temp_dir but you likely don't have to do so
+  ray.init(local_mode=args.local,
+           _temp_dir='/ccn2/u/fanyun',
+           ignore_reinit_error=True)
   ### for some reason, I have to set the following line, otherwiseI will get "URI has empty scheme"
   # exp_config['dir'] = None
 
   # Setup hyper-parameter optimization configs here
-  # if not args.no_tune:
-  #   # NotImplementedError
-  #   tune_config = None
-  # else:
-  #   tune_config = tune.TuneConfig(reuse_actors=False)
-
+  # hyperparam tuning - documentation for tune.TuneConfig: https://docs.ray.io/en/latest/tune/api/doc/ray.tune.TuneConfig.html#ray.tune.TuneConfig
+  if not args.no_tune:
+   # NotImplementedError
+   tune_config = None
+  else:
+   tune_config = tune.TuneConfig(reuse_actors=False)
 
   # Setup checkpointing configurations documentation
   # https://docs.ray.io/en/latest/train/api/doc/ray.train.CheckpointConfig.html?highlight=checkpoint_score_attribute
   ckpt_config = air.CheckpointConfig(
-    num_to_keep=exp_config['keep'], 
+    num_to_keep=exp_config['keep'],
     checkpoint_score_attribute=exp_config['checkpoint_score_attr'],
-    checkpoint_score_order=exp_config['checkpoint_score_order'],  
-    checkpoint_frequency=exp_config['freq'],     
+    checkpoint_score_order=exp_config['checkpoint_score_order'],
+    checkpoint_frequency=exp_config['freq'],
     checkpoint_at_end=exp_config['end'])
+
+  # documentation for air.RunConfig https://github.com/ray-project/ray/blob/c3a9756bf0c7691679edb679f666ae39614ba7e8/python/ray/air/config.py#L575
+  run_config=air.RunConfig(
+    name=exp_config['name'],
+    callbacks=wdb_callbacks,
+    storage_path=exp_config['dir'],
+    local_dir=exp_config['dir'],
+    stop=exp_config['stop'],
+    checkpoint_config=ckpt_config,
+    verbose=3)
 
   # Run Trials documentation https://docs.ray.io/en/latest/tune/api/doc/ray.tune.Tuner.html#ray-tune-tuner  
   results = tune.Tuner(
-      trainer,    # trainable to be tuned
+      trainer, # trainable to be tuned
       param_space=configs.to_dict(),
-      # hyperparam tuning - documentation for tune.TuneConfig: https://docs.ray.io/en/latest/tune/api/doc/ray.tune.TuneConfig.html#ray.tune.TuneConfig
       tune_config=tune_config,
-      # documentation for air.RunConfig https://github.com/ray-project/ray/blob/c3a9756bf0c7691679edb679f666ae39614ba7e8/python/ray/air/config.py#L575
-      run_config=air.RunConfig(
-        name=exp_config['name'], 
-        callbacks=wdb_callbacks,
-        # local_dir=exp_config['dir'], 
-        stop=exp_config['stop'], 
-        checkpoint_config=ckpt_config, 
-        verbose=3),
-        #verbose=0),
+      run_config=run_config,
   ).fit()
 
   best_result = results.get_best_result(metric="episode_reward_mean", mode="max")
   print(best_result)
-  
+
   ray.shutdown()
