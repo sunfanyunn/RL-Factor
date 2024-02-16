@@ -9,6 +9,7 @@ from ray import air
 from ray import tune
 from ray.tune import registry
 from ray.air.integrations.wandb import WandbLoggerCallback
+from run_env_generation import env_creator
 
 
 def get_cli_args():
@@ -98,14 +99,12 @@ def get_cli_args():
   print("Running trails with the following arguments: ", args)
   return args
 
-
 if __name__ == "__main__":
 
   args = get_cli_args()
 
   # Set up Ray. Use local mode for debugging. Ignore reinit error.
   # Register meltingpot environment
-  from run_env_generation import env_creator
   registry.register_env("my_env", env_creator)
 
   # initialize default configurations for native RLlib algorithms (we use one solver 
@@ -133,7 +132,6 @@ if __name__ == "__main__":
   else:
      print('The selected option is not tested. You may encounter issues if you use the baseline \
            policy configurations with non-tested algorithms')
- 
 
   # Ensure GPU is available if set to True
   if configs.num_gpus > 0:

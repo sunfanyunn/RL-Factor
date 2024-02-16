@@ -106,6 +106,8 @@ def env_creator(env_config={}):
 
 if __name__ == "__main__":
 
+    print(gymnasium.make("FlappyBird-v0"))
+    input()
     args = get_cli_args()
 
     # Set up Ray. Use local mode for debugging. Ignore reinit error.
@@ -116,10 +118,11 @@ if __name__ == "__main__":
 
     registry.register_env("my_env", env_creator)
     algo = ppo.PPO(
-          config={
-              "env_config": {} # config to pass to the env class
-          },
-      ).environment(env="my_env")
+        env="my_env",
+        config={
+            "env_config": {} # config to pass to the env class
+        },
+      )
 
     # from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
     def evaluate():
@@ -140,6 +143,7 @@ if __name__ == "__main__":
         # Report results.
         print(f"Shreaked for 1 episode; total-reward={total_reward}")
 
-    for _ in range(100000):
+    for iteration in range(100000):
         results = algo.train()
+        print(f"Iter: {iteration}; avg. reward={results['episode_reward_mean']}")
         evaluate()
