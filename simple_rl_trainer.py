@@ -2,17 +2,19 @@ import argparse
 import os
 # disble tensorflow warning logs
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-import ray
-
+import flappy_bird_gymnasium
+import gymnasium
 from typing import *
+import ray
 from ray import air
 from ray import tune
 from ray.tune import registry
 from ray.air.integrations.wandb import WandbLoggerCallback
+from ray.rllib.algorithms import ppo
+from ray.rllib.algorithms.ppo import PPOConfig
 
 
 def get_cli_args():
-
   parser = argparse.ArgumentParser(description="Training Script for Multi-Agent RL in Meltingpot")
   parser.add_argument(
       "--num_workers",
@@ -99,29 +101,27 @@ def get_cli_args():
   return args
 
 
+def env_creator(env_config={}):
+    return gymnasium.make("FlappyBird-v0")
+
 if __name__ == "__main__":
 
     args = get_cli_args()
+
     # Set up Ray. Use local mode for debugging. Ignore reinit error.
     # Register meltingpot environment
-    from run_env_generation import env_creator
-    registry.register_env("my_env", env_creator)
-
-    from ray.rllib.algorithms import ppo
-    from ray.rllib.algorithms.ppo import PPOConfig
-
     ray.init(local_mode=args.local,
              _temp_dir='/ccn2/u/fanyun',
              ignore_reinit_error=True)
 
+    registry.register_env("my_env", env_creator)
     algo = ppo.PPO(
-          env="my_env",
           config={
               "env_config": {} # config to pass to the env class
           },
-      )
+      ).environment(env="my_env")
 
-    from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
+    # from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
     def evaluate():
         env = env_creator()
         # Get the initial observation (some value between -10.0 and 10.0).

@@ -47,7 +47,7 @@ def get_experiment_config(args, default_config):
         "exp_name": args.exp,
         "stopping": {
                     #"timesteps_total": 1000000,
-                    "timesteps_total": 10000000000,
+                    "timesteps_total": 100000000,
                     #"training_iteration": 1000,
                     #"episode_reward_mean": 100,
         },
@@ -67,15 +67,16 @@ def get_experiment_config(args, default_config):
     run_configs = default_config
     """ Parameter tuning:  check what's inside the default_config to 
     identify what you want to tune """
-    run_configs['gamma'] = tune.uniform(0.9, 0.999)
-    run_configs['lr'] = tune.uniform(0.0001, 0.0005)
-    run_configs['entropy_coeff'] = tune.uniform(0.01, 0.3)
-    # this is config for the tuner
-    tune_configs = tune.TuneConfig(
-      metric='episode_reward_mean',
-      mode='max',
-      num_samples=200,    # number of trials, -1 means infinite
-      reuse_actors=False)  
+    #run_configs['gamma'] = tune.uniform(0.9, 0.999)
+    #run_configs['lr'] = tune.uniform(0.0001, 0.0005)
+    #run_configs['entropy_coeff'] = tune.uniform(0.01, 0.3)
+    ## this is config for the tuner
+    tune_configs = tune.TuneConfig()
+    #tune_configs = tune.TuneConfig(
+    #  metric='episode_reward_mean',
+    #  mode='max',
+    #  num_samples=200,    # number of trials, -1 means infinite
+    #  reuse_actors=False)  
     """ End Parameter tuning """
     # Resources 
     run_configs.num_rollout_workers = params_dict['num_rollout_workers']

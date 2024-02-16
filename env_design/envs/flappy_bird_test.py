@@ -16,7 +16,7 @@ class StateManager:
         self.bird_position_y = 42
         self.bird_size = 5
         self.score = 0
-        self.pipe_positions = [{"x": 50, "y": 50, "counted": False}]
+        self.pipe_positions = [{"x": 30, "y": 50, "counted": False}]
 
         self.jump_velocity = -10
         self.gravity = 1
