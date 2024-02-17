@@ -18,10 +18,9 @@ def eval(trainer, env):
             action = 1
         obs, reward, done, truncated, info = env.step(action)
         total_reward += reward
-        print(action, reward, obs.shape)
         # env.render()  # This depends on the environment having a render method
+    return total_reward
 
-    print(total_reward)
 
 if __name__ == '__main__':
     NUM_TRIALS = 10
@@ -33,7 +32,7 @@ if __name__ == '__main__':
 
     trainer = ppo.PPO(env="my_env")
     # Load the best checkpoint
-    best_checkpoint_path = "/Users/sunfanyun/Desktop/checkpoint_000349"
+    best_checkpoint_path = "/data2/sunfanyun/LLM-Curriculum/results/torch/simple_flappy_bird_ppo/PPO_my_env_ae957_00000_0_2024-02-16_11-22-11/checkpoint_000866"
     trainer.restore(best_checkpoint_path)
 
     for _ in range(NUM_TRIALS):
