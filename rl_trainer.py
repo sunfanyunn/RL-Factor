@@ -102,18 +102,16 @@ def get_cli_args():
 if __name__ == "__main__":
 
   args = get_cli_args()
-
   # Set up Ray. Use local mode for debugging. Ignore reinit error.
   # Register meltingpot environment
   registry.register_env("my_env", env_creator)
 
   # initialize default configurations for native RLlib algorithms (we use one solver 
   # all exploration modules)  
-
+  # Fetch experiment configurations
+  #from configs import get_experiment_config
+  # hyperparameter search
   if args.algo == "ppo":    
-    # Fetch experiment configurations
-    #from configs import get_experiment_config
-    # hyperparameter search
     trainer = "PPO"
     from ray.rllib.algorithms import ppo
     default_config = ppo.PPOConfig()
@@ -129,6 +127,7 @@ if __name__ == "__main__":
 
   elif args.algo == "icm":
     assert False
+
   else:
      print('The selected option is not tested. You may encounter issues if you use the baseline \
            policy configurations with non-tested algorithms')
@@ -141,7 +140,6 @@ if __name__ == "__main__":
      else:
         print("Either GPU is not available on this machine or not visible to this run. Training using CPU only.")
         configs.num_gpus = 0
-
 
   # Setup WanDB    
   if "WANDB_API_KEY" in os.environ and args.wandb:
@@ -206,4 +204,8 @@ if __name__ == "__main__":
   best_result = results.get_best_result(metric="episode_reward_mean", mode="max")
   print(best_result)
 
-  ray.shutdown()
+  best_checkpoint_path = best_result.checkpoint.path
+  from rl_eval import eval
+  print('======================= Final Result ===============================')
+  print(eval(env_creator, best_checkpoint_path, NUM_TRIALS=100))
+

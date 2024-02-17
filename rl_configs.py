@@ -46,8 +46,7 @@ def get_experiment_config(args, default_config):
         # experiment trials
         "exp_name": args.exp,
         "stopping": {
-                    #"timesteps_total": 1000000,
-                    "timesteps_total": 100000000,
+                    "timesteps_total": 100,
                     #"training_iteration": 1000,
                     #"episode_reward_mean": 100,
         },
