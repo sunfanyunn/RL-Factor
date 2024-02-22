@@ -39,7 +39,7 @@ def get_cli_args():
   )
   parser.add_argument(
         "--algo",
-        choices=["ppo", "impala", "icm"],
+        choices=["ppo", "dqn", "impala", "icm"],
         default="ppo",
         help="Algorithm to train agents.",
   )
@@ -83,6 +83,13 @@ def get_cli_args():
   )
 
   parser.add_argument(
+        "--env_id",
+        default="default",
+        help="",
+  )
+
+
+  parser.add_argument(
         "--downsample",
         type=bool,
         default=False,
@@ -111,18 +118,31 @@ if __name__ == "__main__":
   # Fetch experiment configurations
   #from configs import get_experiment_config
   # hyperparameter search
-  if args.algo == "ppo":    
+  from rl_configs import get_experiment_config
+  if args.algo == "ppo":
     trainer = "PPO"
     from ray.rllib.algorithms import ppo
     default_config = ppo.PPOConfig()
-    from rl_configs import get_experiment_config
+    configs, exp_config, tune_config = get_experiment_config(args, default_config)
+
+  elif args.algo == 'dqn':
+    trainer = "DQN"
+    from ray.rllib.algorithms import dqn
+    default_config = dqn.DQNConfig()
+    #replay_config = {
+    #    "type": "MultiAgentPrioritizedReplayBuffer",
+    #    "capacity": 60000,
+    #    "prioritized_replay_alpha": 0.5,
+    #    "prioritized_replay_beta": 0.5,
+    #    "prioritized_replay_eps": 3e-6,
+    #}
+    #default_config.training(replay_buffer_config=replay_config)
     configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
   elif args.algo == "impala":
     trainer = "IMPALA"
     from ray.rllib.algorithms import impala
     default_config = impala.ImpalaConfig()
-    from rl_configs import get_experiment_config
     configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
   elif args.algo == "icm":
@@ -144,7 +164,7 @@ if __name__ == "__main__":
   # Setup WanDB    
   if "WANDB_API_KEY" in os.environ and args.wandb:
     wandb_project = f'{args.exp}_{args.framework}'
-    wandb_group = f'{args.algo}'
+    wandb_group = f'{args.env_id}-{args.algo}'
 
     # Set up Weights And Biases logging if API key is set in environment variable.
     wdb_callbacks = [
@@ -208,4 +228,3 @@ if __name__ == "__main__":
   from rl_eval import eval
   print('======================= Final Result ===============================')
   print(eval(env_creator, best_checkpoint_path, NUM_TRIALS=100))
-

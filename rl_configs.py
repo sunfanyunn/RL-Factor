@@ -28,7 +28,7 @@ def get_experiment_config(args, default_config):
         "sgd_minibatch_size": 2048,
         "disable_observation_precprocessing": True,
         "use_new_rl_modules": False,
-        "use_new_learner_api": False,
+        "use_new_learner_api": True if args.algo != 'dqn' else False,
         "framework": args.framework,
 
         # agent model
@@ -59,8 +59,7 @@ def get_experiment_config(args, default_config):
         # 
         "results_dir": args.results_dir,
         "logging": args.logging,
-
-    }    
+    }
     # tunable parameters for ray.tune.Tuner
     # default_config contains default parameter for the RL algorithm (e.g. PPO)    
     run_configs = default_config
@@ -75,18 +74,19 @@ def get_experiment_config(args, default_config):
       metric='episode_reward_mean',
       mode='max',
       num_samples=200,    # number of trials, -1 means infinite
-      reuse_actors=False)  
+      reuse_actors=False)
     """ End Parameter tuning """
     # Resources 
     run_configs.num_rollout_workers = params_dict['num_rollout_workers']
     run_configs.num_gpus = params_dict['num_gpus']
 
     # Training
-    run_configs.train_batch_size = params_dict['train_batch_size']
+    if args.algo != 'dqn':
+        run_configs.train_batch_size = params_dict['train_batch_size']
     run_configs.sgd_minibatch_size = params_dict['sgd_minibatch_size']
     run_configs.preprocessor_pref = None
     run_configs._disable_preprocessor_api = params_dict['disable_observation_precprocessing']
-    #run_configs.experimental(_enable_rl_module_api=params_dict['use_new_rl_modules'])
+    # run_configs.experimental(_enable_rl_module_api=params_dict['use_new_rl_modules'])
     run_configs.experimental(_enable_new_api_stack=params_dict['use_new_learner_api'])
     run_configs = run_configs.framework(params_dict['framework'])
     run_configs.log_level = params_dict['logging']
@@ -132,8 +132,8 @@ def get_experiment_config(args, default_config):
     #run_configs.model["lstm_use_prev_action"] = params_dict['lstm_use_prev_action']
     #run_configs.model["lstm_use_prev_reward"] = params_dict['lstm_use_prev_reward']
     #run_configs.model["lstm_cell_size"] = params_dict['lstm_cell_size']
-    """ Adding hyper-parameter to search """
 
+    """ Adding hyper-parameter to search """
     # ray air.RunConfig
     experiment_configs = {}
     experiment_configs['name'] = params_dict['exp_name']

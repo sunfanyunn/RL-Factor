@@ -14,8 +14,6 @@ def eval_one_episode(trainer, env):
     total_reward = 0
     while not done:
         action = trainer.compute_single_action(obs)
-        if total_reward >= 2 and total_reward < 2.4:
-            action = 1
         obs, reward, done, truncated, info = env.step(action)
         total_reward += reward
         # env.render()  # This depends on the environment having a render method

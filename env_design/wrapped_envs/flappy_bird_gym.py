@@ -47,19 +47,35 @@ class PygameEnv(gym.Env):
         #        break
 
         # observation = pygame.surfarray.array3d(self.game.state_manager.screen)
-        observation = np.array(
-            [
-                self.game.state_manager.PIPE_WIDTH,
-                self.game.state_manager.PIPE_GAP,
-                self.game.state_manager.bird_position_x,
-                self.game.state_manager.bird_position_y,
-                self.game.state_manager.bird_size,
-                self.game.state_manager.pipe_positions[0]["x"],
-                self.game.state_manager.pipe_positions[0]["y"],
-                self.game.state_manager.jump_velocity,
-                self.game.state_manager.gravity,
-            ]
-        )
+        try:
+            observation = np.array(
+                [
+                    self.game.state_manager.PIPE_WIDTH,
+                    self.game.state_manager.PIPE_GAP,
+                    self.game.state_manager.bird_position_x,
+                    self.game.state_manager.bird_position_y,
+                    self.game.state_manager.bird_size,
+                    self.game.state_manager.pipe_positions[0]["x"],
+                    self.game.state_manager.pipe_positions[0]["y"],
+                    self.game.state_manager.jump_velocity,
+                    self.game.state_manager.gravity,
+                ]
+            )
+        except:
+            observation = np.array(
+                [
+                    self.game.state_manager.PIPE_WIDTH,
+                    self.game.state_manager.PIPE_GAP,
+                    self.game.state_manager.bird_position_x,
+                    self.game.state_manager.bird_position_y,
+                    self.game.state_manager.bird_size,
+                    0,
+                    0,
+                    self.game.state_manager.jump_velocity,
+                    self.game.state_manager.gravity,
+                ]
+            )
+
         if running:
             reward = self.get_reward() + 0.1
         else:
@@ -73,19 +89,34 @@ class PygameEnv(gym.Env):
         self.game.reset()
         self.game.run(pygame.event.Event(pygame.NOEVENT))
         # observation = pygame.surfarray.array3d(self.game.state_manager.screen)
-        observation = np.array(
-            [
-                self.game.state_manager.PIPE_WIDTH,
-                self.game.state_manager.PIPE_GAP,
-                self.game.state_manager.bird_position_x,
-                self.game.state_manager.bird_position_y,
-                self.game.state_manager.bird_size,
-                self.game.state_manager.pipe_positions[0]["x"],
-                self.game.state_manager.pipe_positions[0]["y"],
-                self.game.state_manager.jump_velocity,
-                self.game.state_manager.gravity,
-            ]
-        )
+        try:
+            observation = np.array(
+                [
+                    self.game.state_manager.PIPE_WIDTH,
+                    self.game.state_manager.PIPE_GAP,
+                    self.game.state_manager.bird_position_x,
+                    self.game.state_manager.bird_position_y,
+                    self.game.state_manager.bird_size,
+                    self.game.state_manager.pipe_positions[0]["x"],
+                    self.game.state_manager.pipe_positions[0]["y"],
+                    self.game.state_manager.jump_velocity,
+                    self.game.state_manager.gravity,
+                ]
+            )
+        except:
+            observation = np.array(
+                [
+                    self.game.state_manager.PIPE_WIDTH,
+                    self.game.state_manager.PIPE_GAP,
+                    self.game.state_manager.bird_position_x,
+                    self.game.state_manager.bird_position_y,
+                    self.game.state_manager.bird_size,
+                    0,
+                    0,
+                    self.game.state_manager.jump_velocity,
+                    self.game.state_manager.gravity,
+                ]
+            )
         info = {}  # Additional info for debugging
         return observation, info
 

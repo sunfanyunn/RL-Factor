@@ -1,4 +1,4 @@
-
+ray==2.9.2
 numpy
 pygame
 openai
