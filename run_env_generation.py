@@ -8,13 +8,14 @@ from game_structure import GameRep
 from openai import OpenAI
 
 
-# from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
+from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
 # def env_creator(env_config={}):
 #     return PygameEnv()  # return an env instance
 import gymnasium
 import flappy_bird_gymnasium
 def env_creator(env_config={}):
-    return gymnasium.make("FlappyBird-v0")
+    # return gymnasium.make("FlappyBird-v0")
+    return PygameEnv()  # return an env instance
 
 
 if __name__ == "__main__":

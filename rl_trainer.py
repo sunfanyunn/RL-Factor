@@ -2,9 +2,9 @@ import argparse
 import os
 # disble tensorflow warning logs
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-import ray
-
 from typing import *
+
+import ray
 from ray import air
 from ray import tune
 from ray.tune import registry

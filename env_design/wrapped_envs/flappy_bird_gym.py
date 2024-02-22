@@ -15,7 +15,8 @@ class PygameEnv(gym.Env):
         self.game = Game()  # Initialize your game class
 
         self.action_space = gym.spaces.Discrete(n=2)  # 0: do nothing; 1: flap
-        self.observation_space = gym.spaces.Box(low=0, high=255, shape=(self.game.state_manager.SCREEN_WIDTH, self.game.state_manager.SCREEN_HEIGHT, 3), dtype=np.uint8)
+        #self.observation_space = gym.spaces.Box(low=0, high=255, shape=(self.game.state_manager.SCREEN_WIDTH, self.game.state_manager.SCREEN_HEIGHT, 3), dtype=np.uint8)
+        self.observation_space = gym.spaces.Box(-np.inf, np.inf, shape=(9,), dtype=np.float64)
 
         self.done = False
         self.previous_score = 0
@@ -45,7 +46,20 @@ class PygameEnv(gym.Env):
         #    if not running:
         #        break
 
-        observation = pygame.surfarray.array3d(self.game.state_manager.screen)
+        # observation = pygame.surfarray.array3d(self.game.state_manager.screen)
+        observation = np.array(
+            [
+                self.game.state_manager.PIPE_WIDTH,
+                self.game.state_manager.PIPE_GAP,
+                self.game.state_manager.bird_position_x,
+                self.game.state_manager.bird_position_y,
+                self.game.state_manager.bird_size,
+                self.game.state_manager.pipe_positions[0]["x"],
+                self.game.state_manager.pipe_positions[0]["y"],
+                self.game.state_manager.jump_velocity,
+                self.game.state_manager.gravity,
+            ]
+        )
         if running:
             reward = self.get_reward() + 0.1
         else:
@@ -58,7 +72,20 @@ class PygameEnv(gym.Env):
     def reset(self, *, seed=None, options=None):
         self.game.reset()
         self.game.run(pygame.event.Event(pygame.NOEVENT))
-        observation = pygame.surfarray.array3d(self.game.state_manager.screen)
+        # observation = pygame.surfarray.array3d(self.game.state_manager.screen)
+        observation = np.array(
+            [
+                self.game.state_manager.PIPE_WIDTH,
+                self.game.state_manager.PIPE_GAP,
+                self.game.state_manager.bird_position_x,
+                self.game.state_manager.bird_position_y,
+                self.game.state_manager.bird_size,
+                self.game.state_manager.pipe_positions[0]["x"],
+                self.game.state_manager.pipe_positions[0]["y"],
+                self.game.state_manager.jump_velocity,
+                self.game.state_manager.gravity,
+            ]
+        )
         info = {}  # Additional info for debugging
         return observation, info
 
@@ -76,7 +103,7 @@ if __name__ == "__main__":
         # action = env.action_space.sample()
         action = int(input())
         observation, reward, done, truncated, info = env.step(action)
-        imageio.imsave(f"logs/test{i}.png", observation)
+        #imageio.imsave(f"logs/test{i}.png", observation)
         print(observation.shape, reward)
         print(reward)
         i += 1
