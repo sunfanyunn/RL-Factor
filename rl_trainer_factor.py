@@ -11,6 +11,7 @@ from ray.tune import registry
 from ray.air.integrations.wandb import WandbLoggerCallback
 from run_env_generation import env_creator
 
+from ray.rllib.models import ModelCatalog
 
 def get_cli_args():
 
@@ -111,6 +112,8 @@ if __name__ == "__main__":
   # Set up Ray. Use local mode for debugging. Ignore reinit error.
   # Register meltingpot environment
   registry.register_env("my_env", env_creator)
+  from factor_gnn import FactorGraphRL
+  ModelCatalog.register_custom_model("factor_gnn", FactorGraphRL)
 
   # initialize default configurations for native RLlib algorithms (we use one solver 
   # all exploration modules)  

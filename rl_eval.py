@@ -20,10 +20,11 @@ def eval_one_episode(trainer, env):
     return total_reward
 
 
-def eval(env_creator, best_checkpoint_path, NUM_TRIALS=10):
+def evaluate(env_creator, best_checkpoint_path, NUM_TRIALS=10):
 
     # Initialize Ray
-    ray.init(ignore_reinit_error=True)
+    ray.init(_temp_dir='/data2/sunfanyun/tmp',
+             ignore_reinit_error=True)
     # Register environment
     registry.register_env("my_env", env_creator)
     env = env_creator()
@@ -44,5 +45,6 @@ def eval(env_creator, best_checkpoint_path, NUM_TRIALS=10):
 
 if __name__ == '__main__':
     from run_env_generation import env_creator
-    best_checkpoint_path = "/data2/sunfanyun/LLM-Curriculum/results/torch/simple_flappy_bird_ppo/PPO_my_env_ae957_00000_0_2024-02-16_11-22-11/checkpoint_000866"
-    print(eval(env_creator, best_checkpoint_path))
+    #best_checkpoint_path = "/data2/sunfanyun/LLM-Curriculum/results/torch/simple_flappy_bird_ppo/PPO_my_env_ae957_00000_0_2024-02-16_11-22-11/checkpoint_000866"
+    best_checkpoint_path = "results/torch-ppo/factor-baselines/PPO_my_env_5c853_00000_0_entropy_coeff=0.1715,gamma=0.9735,lr=0.0004_2024-02-23_02-07-33/checkpoint_000199"
+    print(evaluate(env_creator, best_checkpoint_path))

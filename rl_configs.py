@@ -69,7 +69,6 @@ def get_experiment_config(args, default_config):
     run_configs['lr'] = tune.uniform(0.0001, 0.0005)
     run_configs['entropy_coeff'] = tune.uniform(0.01, 0.3)
     ## this is config for the tuner
-    tune_configs = tune.TuneConfig()
     tune_configs = tune.TuneConfig(
       metric='episode_reward_mean',
       mode='max',
@@ -146,8 +145,8 @@ def get_experiment_config(args, default_config):
     experiment_configs['end'] = params_dict['checkpoint_at_end']
 
     if args.framework == 'tf':
-        experiment_configs['dir'] = f"{params_dict['results_dir']}/tf"
+        experiment_configs['dir'] = f"{params_dict['results_dir']}/tf-{args.algo}"
     else:
-        experiment_configs['dir'] = f"{params_dict['results_dir']}/torch"
+        experiment_configs['dir'] = f"{params_dict['results_dir']}/torch-{args.algo}"
 
     return run_configs, experiment_configs, tune_configs
