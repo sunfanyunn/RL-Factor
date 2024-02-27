@@ -9,102 +9,110 @@ from ray import air
 from ray import tune
 from ray.tune import registry
 from ray.air.integrations.wandb import WandbLoggerCallback
-from run_env_generation import env_creator
+from prepare_env import env_creator
 
 from ray.rllib.models import ModelCatalog
 
-def get_cli_args():
+from factor_gnn import FactorGraphRL, TorchCustomLossModel
 
-  parser = argparse.ArgumentParser(description="Training Script for Multi-Agent RL in Meltingpot")
-  parser.add_argument(
-      "--num_workers",
-      type=int,
-      default=0,
-      help="Number of workers to use for sample collection. Setting it zero will use same worker for collection and model training.",
-  )
-  parser.add_argument(
-      "--num_gpus",
-      type=int,
-      default=1,
-      help="Number of GPUs to run on (can be a fraction)",
-  )
-  parser.add_argument(
-      "--local",
-      action="store_true",
-      help="If enabled, init ray in local mode. Tips: use this for debugging.",
-  )
-  parser.add_argument(
-      "--no-tune",
-      action="store_true",
-      help="If enabled, no hyper-parameter tuning.",
-  )
-  parser.add_argument(
+def get_cli_args():
+    parser = argparse.ArgumentParser(description="Training Script for Multi-Agent RL in Meltingpot")
+    parser.add_argument(
+        "--num_workers",
+        type=int,
+        default=0,
+        help="Number of workers to use for sample collection. Setting it zero will use same worker for collection and model training.",
+    )
+    parser.add_argument(
+        "--num_gpus",
+        type=int,
+        default=1,
+        help="Number of GPUs to run on (can be a fraction)",
+    )
+    parser.add_argument(
+        "--local",
+        action="store_true",
+        help="If enabled, init ray in local mode. Tips: use this for debugging.",
+    )
+    parser.add_argument(
+        "--no-tune",
+        action="store_true",
+        help="If enabled, no hyper-parameter tuning.",
+    )
+    parser.add_argument(
         "--algo",
         choices=["ppo", "dqn", "impala", "icm"],
         default="ppo",
         help="Algorithm to train agents.",
-  )
-  parser.add_argument(
+    )
+    parser.add_argument(
         "--framework",
         choices=["tf", "torch"],
         default="torch",
         help="The DL framework specifier (tf2 eager is not supported).",
-  )
-  parser.add_argument(
-      "--exp",
-      type=str,
-      default="",
-      help="Name of the substrate to run",
-  )
-  parser.add_argument(
-      "--seed",
-      type=int,
-      default=123,
-      help="Seed to run",
-  )
-  parser.add_argument(
-      "--results_dir",
-      type=str,
-      default="./results",
-      help="path to save results",
-  )
-  parser.add_argument(
+    )
+    parser.add_argument(
+        "--exp",
+        type=str,
+        default="",
+        help="Name of the substrate to run",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=123,
+        help="Seed to run",
+    )
+    parser.add_argument(
+        "--results_dir",
+        type=str,
+        default="./results",
+        help="path to save results",
+    )
+    parser.add_argument(
         "--logging",
         choices=["DEBUG", "INFO", "WARN", "ERROR"],
         default="INFO",
         help="The level of training and data flow messages to print.",
-  )
+    )
 
-  parser.add_argument(
+    parser.add_argument(
         "--wandb",
         action="store_true",
         # type=bool,
         # default=False,
         help="Whether to use WanDB logging.",
-  )
+    )
 
-  parser.add_argument(
+    parser.add_argument(
+        "--env_name",
+        default="default",
+        help="",
+    )
+
+    parser.add_argument(
         "--env_id",
         default="default",
         help="",
-  )
+    )
 
-  parser.add_argument(
+    parser.add_argument(
         "--downsample",
         type=bool,
         default=False,
         help="Whether to downsample substrates in MeltingPot. Defaults to 8.",
-  )
+    )
 
-  parser.add_argument(
+    parser.add_argument(
         "--as-test",
         action="store_true",
         help="Whether this script should be run as a test.",
-  )
+    )
 
-  args = parser.parse_args()
-  print("Running trails with the following arguments: ", args)
-  return args
+
+    args = parser.parse_args()
+    print("Running trails with the following arguments: ", args)
+    return args
 
 if __name__ == "__main__":
 
@@ -112,8 +120,8 @@ if __name__ == "__main__":
   # Set up Ray. Use local mode for debugging. Ignore reinit error.
   # Register meltingpot environment
   registry.register_env("my_env", env_creator)
-  from factor_gnn import FactorGraphRL
-  ModelCatalog.register_custom_model("factor_gnn", FactorGraphRL)
+  
+  ModelCatalog.register_custom_model("factor_gnn", TorchCustomLossModel)
 
   # initialize default configurations for native RLlib algorithms (we use one solver 
   # all exploration modules)  
@@ -125,6 +133,7 @@ if __name__ == "__main__":
     trainer = "PPO"
     from ray.rllib.algorithms import ppo
     default_config = ppo.PPOConfig()
+    default_config.model = {"custom_model": "TorchCustomLossModel"}
     configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
   elif args.algo == 'dqn':
@@ -163,27 +172,27 @@ if __name__ == "__main__":
         print("Either GPU is not available on this machine or not visible to this run. Training using CPU only.")
         configs.num_gpus = 0
 
-  # Setup WanDB    
+     # Setup WanDB
   if "WANDB_API_KEY" in os.environ and args.wandb:
-    wandb_project = f'{args.exp}_{args.framework}'
-    wandb_group = f'{args.env_id}-{args.algo}'
+      wandb_project = f'{args.exp}_{args.framework}'
+      wandb_group = f'{args.env_id}-{args.env_name}-{args.algo}'
 
-    # Set up Weights And Biases logging if API key is set in environment variable.
-    wdb_callbacks = [
-        WandbLoggerCallback(
-            project=wandb_project,
-            group=wandb_group,
-            api_key=os.environ["WANDB_API_KEY"],
-            log_config=True,
-        )
-    ]
+      # Set up Weights And Biases logging if API key is set in environment variable.
+      wdb_callbacks = [
+          WandbLoggerCallback(
+              project=wandb_project,
+              group=wandb_group,
+              api_key=os.environ["WANDB_API_KEY"],
+              log_config=True,
+          )
+      ]
   else:
-    wdb_callbacks = []
-    print("WARNING! No wandb API key found, running without wandb!")
+      wdb_callbacks = []
+      print("WARNING! No wandb API key found, running without wandb!")
 
   ### I changed the _temp_dir but you likely don't have to do so
   ray.init(local_mode=args.local,
-           _temp_dir='/data2/sunfanyun/tmp',
+           _temp_dir='/Users/vctrlin/Downloads/tmp1',
            ignore_reinit_error=True)
   ### for some reason, I have to set the following line, otherwiseI will get "URI has empty scheme"
   # exp_config['dir'] = None
