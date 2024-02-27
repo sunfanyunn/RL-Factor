@@ -9,7 +9,7 @@ from ray import air
 from ray import tune
 from ray.tune import registry
 from ray.air.integrations.wandb import WandbLoggerCallback
-from run_env_generation import env_creator
+from prepare_env import env_creator
 
 
 def get_cli_args():
@@ -83,6 +83,12 @@ def get_cli_args():
   )
 
   parser.add_argument(
+        "--env_name",
+        default="default",
+        help="",
+  )
+
+  parser.add_argument(
         "--env_id",
         default="default",
         help="",
@@ -104,6 +110,7 @@ def get_cli_args():
   args = parser.parse_args()
   print("Running trails with the following arguments: ", args)
   return args
+
 
 if __name__ == "__main__":
 
@@ -155,7 +162,7 @@ if __name__ == "__main__":
   # Setup WanDB    
   if "WANDB_API_KEY" in os.environ and args.wandb:
     wandb_project = f'{args.exp}_{args.framework}'
-    wandb_group = f'{args.env_id}-{args.algo}'
+    wandb_group = f'{args.env_id}-{args.env_name}-{args.algo}'
 
     # Set up Weights And Biases logging if API key is set in environment variable.
     wdb_callbacks = [

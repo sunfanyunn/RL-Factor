@@ -6,11 +6,6 @@ from ray.rllib.policy import policy
 
 
 def get_experiment_config(args, default_config):
-    if args.downsample:
-        scale_factor = 8
-    else:
-        scale_factor = 1
-
     params_dict = {
         # resources
         "num_rollout_workers": args.num_workers,
@@ -18,7 +13,7 @@ def get_experiment_config(args, default_config):
 
         # Env
         "env_name": "my_env",
-        "env_config": {"scaled": scale_factor},
+        "env_config": {"name": args.env_name},
 
         # training
         # parameter explanation https://github.com/ray-project/ray/blob/c3a9756bf0c7691679edb679f666ae39614ba7e8/rllib/algorithms/algorithm_config.py#L1509        
