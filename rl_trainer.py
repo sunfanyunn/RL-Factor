@@ -222,7 +222,7 @@ if __name__ == "__main__":
   best_result = results.get_best_result(metric="episode_reward_mean", mode="max")
   print(best_result)
 
-  best_checkpoint_path = best_result.checkpoint.path
-  from rl_eval import eval
-  print('======================= Final Result ===============================')
-  print(eval(env_creator, best_checkpoint_path, NUM_TRIALS=100))
+#  best_checkpoint_path = best_result.checkpoint.path
+#  from rl_eval import eval
+#  print('======================= Final Result ===============================')
+#  print(eval(env_creator, best_checkpoint_path, NUM_TRIALS=100))

@@ -141,8 +141,8 @@ def get_experiment_config(args, default_config):
     experiment_configs['end'] = params_dict['checkpoint_at_end']
 
     if args.framework == 'tf':
-        experiment_configs['dir'] = f"{params_dict['results_dir']}/tf-{args.algo}"
+        experiment_configs['dir'] = f"{params_dict['results_dir']}/tf-{args.env_name}-{args.algo}"
     else:
-        experiment_configs['dir'] = f"{params_dict['results_dir']}/torch-{args.algo}"
+        experiment_configs['dir'] = f"{params_dict['results_dir']}/torch-{args.env_name}-{args.algo}"
 
     return run_configs, experiment_configs, tune_configs

@@ -8,15 +8,17 @@
 
 # find your wandb api key here: https://wandb.ai/authorize
 export WANDB_API_KEY=029e65312d09126e44b5a5912de0720e072bb9de
-export TUNE_RESULT_DIR=/data2/sunfanyun/LLM-Curriculum/results
+export TUNE_RESULT_DIR=/data2/sunfanyun/LLM-Factor/results
 
 ### rl training
 
-env_name=catcher
-env_id=state_final
+env_name=$1
+env_id=ple
 results_dir=/data2/sunfanyun/LLM-Curriculum/results
-algo=$1
 
-python rl_trainer.py --exp factor-baselines  --env_name $env_name --env_id $env_id --algo $algo --wandb --num_gpus 1 --num_workers 40 --results_dir $results_dir
+for algo in ppo impala dqn
+do
+  python rl_trainer.py --exp factor-baselines  --env_name $env_name --env_id $env_id --algo $algo --wandb --num_gpus 1 --num_workers 40 --results_dir $results_dir
+done
 #python rl_trainer.py --exp factor-baselines --env_name $env_name --env_id $env_id --algo ppo --wandb --num_gpus 1 --num_workers 40 --results_dir $results_dir
 #python rl_trainer.py --exp factor-baselines --env_name $env_name --env_id $env_id --algo impala --wandb --num_gpus 1 --num_workers 40 --results_dir $results_dir

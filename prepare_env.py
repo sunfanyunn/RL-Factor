@@ -11,31 +11,31 @@ class PygameEnv(gym.Env):
         super(PygameEnv, self).__init__()
         # Define action and observation space
         # They must be gym.spaces object
-        print(config)
-        if config["name"] == "flappy_bird":
+        self.game_name = config["name"]
+        if self.game_name == "flappy_bird":
             from ple.games.flappybird import FlappyBird
             self.game = FlappyBird() 
-        elif config["name"] == "catcher":
+        elif self.game_name == "catcher":
             from ple.games.catcher import Catcher
             self.game = Catcher() 
-        elif config["name"] == "pixelcopter":
+        elif self.game_name == "pixelcopter":
             from ple.games.pixelcopter import Pixelcopter
             self.game = Pixelcopter() 
-        elif config["name"] == "puckworld": 
+        elif self.game_name == "puckworld": 
             from ple.games.puckworld import PuckWorld
             self.game = PuckWorld()
-        elif config["name"] == "snake":
+        elif self.game_name == "snake":
             from ple.games.snake import Snake
             self.game = Snake()
-        elif config["name"] == "waterworld":
+        elif self.game_name == "waterworld":
             from ple.games.waterworld import WaterWorld
             self.game = WaterWorld()
-        elif config["name"] == "pong":
+        elif self.game_name == "pong":
             from ple.games.pong import Pong
             self.game = Pong()
         else:
             assert False
-        
+
 
         self.p = PLE(self.game, fps=30, display_screen=False)
         self.p.init()
@@ -49,12 +49,31 @@ class PygameEnv(gym.Env):
 
     def get_state(self):
         observation_dict = self.p.getGameState()
-        # sort the dictinoary and return a numpy array
-        observation = np.array([observation_dict[key] for key in sorted(observation_dict.keys())])
+        if self.game_name == "waterworld":
+            observations = []
+            for key in sorted(observation_dict.keys()):
+                if key == 'creep_pos':
+                    observations.append( \
+                        np.concatenate([np.array(observation_dict['creep_pos'][k]).flatten() for k in sorted(observation_dict['creep_pos'].keys())])
+                    )
+                else:
+                    observations.append(np.array(observation_dict[key]).flatten())
+            observation = np.concatenate(observations)
+        elif self.game_name == "snake":
+            observations = []
+            for key in sorted(observation_dict.keys()):
+                if key == 'snake_body_pos':
+                    body_pos = np.array(observation_dict['snake_body_pos'])
+                    observations.append(body_pos[:5].flatten())
+                else:
+                    observations.append(np.array(observation_dict[key]).flatten())
+            observation = np.concatenate([np.array(observation_dict[key]).flatten() for key in sorted(observation_dict.keys())])
+        else:
+            observation = np.concatenate([np.array(observation_dict[key]).flatten() for key in sorted(observation_dict.keys())])
         return observation
 
     def step(self, action):
-        reward = self.p.act(action)
+        reward = self.p.act(self.all_possible_actions[action])
         observation = self.get_state()
         terminated = self.p.game_over()
         truncated = False
@@ -73,22 +92,29 @@ def env_creator(env_config):
 
 
 if __name__ == "__main__":
-    register_env("my_env", env_creator)
-    env = env_creator()
-    #observation, info = env.reset()
-    observation, _ = env.reset()
+    from ray.rllib.utils import check_env
+    for env_name in ["pong", "snake", "waterworld"]:
+        env_config = {"name": env_name}
+        env = env_creator(env_config)
+        print(env.p.getActionSet())
+        check_env(env)
+        print(f"{env_name} passed")
+        input()
 
-    import imageio
-    i = 0
+    #observation, info = env.reset()
+    observation, info = env.reset()
+    import pdb;pdb.set_trace()
+    print(observation.shape)
+    print(env.p.getGameState())
+
     done = False
-    total_reward = 0
-    while not done:
-        # action = env.action_space.sample()
-        action = int(input())
-        observation, reward, done, truncated, info = env.step(action)
-        #imageio.imsave(f"logs/test{i}.png", observation)
-        print(observation.shape, reward)
-        print(reward)
-        i += 1
-    pygame.quit()
+    for _ in range(10):
+        i = 0
+        total_reward = 0
+        while not done:
+            action = env.action_space.sample()
+            observation, reward, done, truncated, info = env.step(action)
+            total_reward += reward
+            i += 1
+        print(total_reward)
     env.close()
