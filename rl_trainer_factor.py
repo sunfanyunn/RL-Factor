@@ -227,6 +227,6 @@ if __name__ == "__main__":
   print(best_result)
 
   best_checkpoint_path = best_result.checkpoint.path
-  from rl_eval import eval
+  from rl_eval import evaluate
   print('======================= Final Result ===============================')
   print(eval(env_creator, best_checkpoint_path, NUM_TRIALS=100))

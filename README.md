@@ -8,6 +8,10 @@ refer to `go.sh` to start the training
 
 ###
 
+All the environments we use will be from https://github.com/ntasfi/PyGame-Learning-Environment/tree/master
+
+###
+
 To fix storage location bug or Ray 2.9.2:
 
 change the `/data2/sunfanyun/miniconda3/lib/python3.9/site-packages/ray/tune/impl/tuner_internal.py:445`

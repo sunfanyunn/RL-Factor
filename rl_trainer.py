@@ -128,14 +128,6 @@ if __name__ == "__main__":
     trainer = "DQN"
     from ray.rllib.algorithms import dqn
     default_config = dqn.DQNConfig()
-    #replay_config = {
-    #    "type": "MultiAgentPrioritizedReplayBuffer",
-    #    "capacity": 60000,
-    #    "prioritized_replay_alpha": 0.5,
-    #    "prioritized_replay_beta": 0.5,
-    #    "prioritized_replay_eps": 3e-6,
-    #}
-    #default_config.training(replay_buffer_config=replay_config)
     configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
   elif args.algo == "impala":
