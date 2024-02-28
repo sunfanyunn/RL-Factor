@@ -37,7 +37,7 @@ class PygameEnv(gym.Env):
             assert False
 
 
-        self.p = PLE(self.game, fps=30, display_screen=False)
+        self.p = PLE(self.game, display_screen=False)
         self.p.init()
         self.all_possible_actions = self.p.getActionSet()
 
@@ -47,29 +47,50 @@ class PygameEnv(gym.Env):
 
         self.current_step = 0
 
+    def preprocess_state(self, observation_dict, padding_number=10):
+
+        new_observation_dict = {}
+        if self.game_name == "waterworld":
+            for key in sorted(observation_dict.keys()):
+                if key == "creep_dist":
+                    continue
+                if key == "creep_pos":
+                    for idx in range(padding_number):
+                        if len(observation_dict["creep_pos"]["GOOD"]) > idx:
+                            new_observation_dict[f"good_creep_pos_{idx}"] = observation_dict["creep_pos"]["GOOD"][idx]
+                        else:
+                            new_observation_dict[f"good_creep_pos_{idx}"] = [0, 0]
+
+                    for idx in range(padding_number):
+                        if len(observation_dict["creep_pos"]["BAD"]) > idx:
+                            new_observation_dict[f"bad_creep_pos_{idx}"] = observation_dict["creep_pos"]["BAD"][idx]
+                        else:
+                            new_observation_dict[f"bad_creep_pos_{idx}"] = [0, 0]
+                else:
+                    new_observation_dict[key] = observation_dict[key]
+            return new_observation_dict
+
+        elif self.game_name == "snake":
+            for key in sorted(observation_dict.keys()):
+                if key == "snake_body":
+                    continue
+                if key == 'snake_body_pos':
+                    for idx in range(padding_number):
+                        if len(observation_dict["snake_body_pos"]) > idx:
+                            new_observation_dict[f"snake_body_pos_{idx}"] = observation_dict["snake_body_pos"][idx]
+                        else:
+                            new_observation_dict[f"snake_body_pos_{idx}"] = [0, 0]
+                else:
+                    new_observation_dict[key] = observation_dict[key]
+            return new_observation_dict
+
+        else:
+            return observation_dict
+
     def get_state(self):
         observation_dict = self.p.getGameState()
-        if self.game_name == "waterworld":
-            observations = []
-            for key in sorted(observation_dict.keys()):
-                if key == 'creep_pos':
-                    observations.append( \
-                        np.concatenate([np.array(observation_dict['creep_pos'][k]).flatten() for k in sorted(observation_dict['creep_pos'].keys())])
-                    )
-                else:
-                    observations.append(np.array(observation_dict[key]).flatten())
-            observation = np.concatenate(observations)
-        elif self.game_name == "snake":
-            observations = []
-            for key in sorted(observation_dict.keys()):
-                if key == 'snake_body_pos':
-                    body_pos = np.array(observation_dict['snake_body_pos'])
-                    observations.append(body_pos[:5].flatten())
-                else:
-                    observations.append(np.array(observation_dict[key]).flatten())
-            observation = np.concatenate([np.array(observation_dict[key]).flatten() for key in sorted(observation_dict.keys())])
-        else:
-            observation = np.concatenate([np.array(observation_dict[key]).flatten() for key in sorted(observation_dict.keys())])
+        observation_dict = self.preprocess_state(observation_dict)
+        observation = np.concatenate([np.array(observation_dict[key]).flatten() for key in sorted(observation_dict.keys())])
         return observation
 
     def step(self, action):
@@ -79,6 +100,17 @@ class PygameEnv(gym.Env):
         truncated = False
         info = {}
         # Execute one time step within the environment
+
+        ### game specific logics
+        if self.game_name == "snake":
+            observation_dict = self.p.getGameState()
+            if len(observation_dict["snake_body_pos"]) >= 10:
+                terminated = True
+        if self.game_name == "waterworld":
+            observation_dict = self.p.getGameState()
+            if len(observation_dict["creep_pos"]["BAD"]) > 10:
+                terminated = True
+
         return observation, reward, terminated, truncated, info
 
     def reset(self, *, seed=None, options=None):
@@ -93,28 +125,26 @@ def env_creator(env_config):
 
 if __name__ == "__main__":
     from ray.rllib.utils import check_env
-    for env_name in ["pong", "snake", "waterworld"]:
+    for env_name in ["waterworld", "snake"]:
         env_config = {"name": env_name}
         env = env_creator(env_config)
         print(env.p.getActionSet())
         check_env(env)
         print(f"{env_name} passed")
-        input()
 
-    #observation, info = env.reset()
-    observation, info = env.reset()
-    import pdb;pdb.set_trace()
-    print(observation.shape)
-    print(env.p.getGameState())
+        #observation, info = env.reset()
+        observation, info = env.reset()
+        print(observation.shape)
+        print(env.p.getGameState())
 
-    done = False
-    for _ in range(10):
-        i = 0
-        total_reward = 0
-        while not done:
-            action = env.action_space.sample()
-            observation, reward, done, truncated, info = env.step(action)
-            total_reward += reward
-            i += 1
-        print(total_reward)
-    env.close()
+        done = False
+        for _ in range(10):
+            i = 0
+            total_reward = 0
+            while not done:
+                action = env.action_space.sample()
+                observation, reward, done, truncated, info = env.step(action)
+                total_reward += reward
+                i += 1
+            print(total_reward)
+        env.close()
