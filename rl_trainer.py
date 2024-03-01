@@ -129,12 +129,12 @@ if __name__ == "__main__":
         from ray.rllib.algorithms import dreamerv3
         trainer = "DreamerV3"
         num_gpus = args.num_gpus
-        default_config = dreamerv3.DreamerV3Config().resources(
-            num_rollout_workers=0,
-            num_learner_workers=0 if num_gpus == 1 else num_gpus,
-            num_gpus_per_learner_worker=1 if num_gpus else 0,
-            num_cpus_for_local_worker=1,
-        )
+        default_config = dreamerv3.DreamerV3Config()
+        #.resources(
+        #    num_learner_workers=0 if num_gpus == 1 else num_gpus,
+        #    num_gpus_per_learner_worker=1 if num_gpus else 0,
+        #    num_cpus_for_local_worker=1,
+        #)
         configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
     if args.algo == "ppo":
