@@ -1,8 +1,61 @@
 import gymnasium as gym
 import numpy as np
-import pygame
-from ray.rllib.env.env_context import EnvContext
 from ple import PLE
+
+
+def get_factors(env_name):
+    if env_name == "flappy_bird":
+        factors = [
+            {
+                "factor_name": "jump_logic",
+                "used_state_variables": [
+                    {"name": "game_over", "type": "bool", "dimensionality": "scalar"},
+                    {"name": "jump_velocity", "type": "int", "dimensionality": "scalar"}
+                ],
+                "modified_state_variables": [
+                    {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"}
+                ]
+            },
+            {
+                "factor_name": "gravity_logic",
+                "used_state_variables": [
+                    {"name": "gravity", "type": "int", "dimensionality": "scalar"}
+                ],
+                "modified_state_variables": [
+                    {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"}
+                ]
+            },
+            {
+                "factor_name": "pipe_logic",
+                "used_state_variables": [
+                    {"name": "bird_position_x", "type": "int", "dimensionality": "scalar"},
+                    {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"},
+                    {"name": "bird_size", "type": "int", "dimensionality": "scalar"},
+                    {"name": "SCREEN_WIDTH", "type": "int", "dimensionality": "scalar"},
+                    {"name": "PIPE_WIDTH", "type": "int", "dimensionality": "scalar"},
+                    {"name": "PIPE_GAP", "type": "int", "dimensionality": "scalar"},
+                    {"name": "pipe_positions", "type": "list", "dimensionality": "collection"}
+                ],
+                "modified_state_variables": [
+                    {"name": "pipe_positions", "type": "list", "dimensionality": "collection"},
+                    {"name": "score", "type": "int", "dimensionality": "scalar"},
+                    {"name": "game_over", "type": "bool", "dimensionality": "scalar"}
+                ]
+            },
+            {
+                "factor_name": "game_over_logic",
+                "used_state_variables": [
+                    {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"},
+                    {"name": "SCREEN_HEIGHT", "type": "int", "dimensionality": "scalar"}
+                ],
+                "modified_state_variables": [
+                    {"name": "game_over", "type": "bool", "dimensionality": "scalar"}
+                ]
+            }
+        ]
+        return factors
+    else:
+        assert False
 
 class PygameEnv(gym.Env):
     """Custom Environment that follows gym interface"""
@@ -11,26 +64,26 @@ class PygameEnv(gym.Env):
         super(PygameEnv, self).__init__()
         # Define action and observation space
         # They must be gym.spaces object
-        self.game_name = config["name"]
-        if self.game_name == "flappy_bird":
+        self.env_name = config["name"]
+        if self.env_name == "flappy_bird":
             from ple.games.flappybird import FlappyBird
             self.game = FlappyBird() 
-        elif self.game_name == "catcher":
+        elif self.env_name == "catcher":
             from ple.games.catcher import Catcher
             self.game = Catcher() 
-        elif self.game_name == "pixelcopter":
+        elif self.env_name == "pixelcopter":
             from ple.games.pixelcopter import Pixelcopter
             self.game = Pixelcopter() 
-        elif self.game_name == "puckworld": 
+        elif self.env_name == "puckworld": 
             from ple.games.puckworld import PuckWorld
             self.game = PuckWorld()
-        elif self.game_name == "snake":
+        elif self.env_name == "snake":
             from ple.games.snake import Snake
             self.game = Snake()
-        elif self.game_name == "waterworld":
+        elif self.env_name == "waterworld":
             from ple.games.waterworld import WaterWorld
             self.game = WaterWorld()
-        elif self.game_name == "pong":
+        elif self.env_name == "pong":
             from ple.games.pong import Pong
             self.game = Pong()
         else:
@@ -50,7 +103,7 @@ class PygameEnv(gym.Env):
     def preprocess_state(self, observation_dict, padding_number=10):
 
         new_observation_dict = {}
-        if self.game_name == "waterworld":
+        if self.env_name == "waterworld":
             for key in sorted(observation_dict.keys()):
                 if key == "creep_dist":
                     continue
@@ -70,7 +123,7 @@ class PygameEnv(gym.Env):
                     new_observation_dict[key] = observation_dict[key]
             return new_observation_dict
 
-        elif self.game_name == "snake":
+        elif self.env_name == "snake":
             for key in sorted(observation_dict.keys()):
                 if key == "snake_body":
                     continue
@@ -102,11 +155,11 @@ class PygameEnv(gym.Env):
         # Execute one time step within the environment
 
         ### game specific logics
-        if self.game_name == "snake":
+        if self.env_name == "snake":
             observation_dict = self.p.getGameState()
             if len(observation_dict["snake_body_pos"]) >= 10:
                 terminated = True
-        if self.game_name == "waterworld":
+        if self.env_name == "waterworld":
             observation_dict = self.p.getGameState()
             if len(observation_dict["creep_pos"]["BAD"]) > 10:
                 terminated = True

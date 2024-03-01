@@ -76,7 +76,7 @@ def get_experiment_config(args, default_config):
     run_configs.num_gpus = params_dict['num_gpus']
 
     # Training
-    if args.algo != 'dqn':
+    if args.algo != 'dqn' and args.algo != 'dreamerv3':
         run_configs.train_batch_size = params_dict['train_batch_size']
     run_configs.sgd_minibatch_size = params_dict['sgd_minibatch_size']
     run_configs.preprocessor_pref = None

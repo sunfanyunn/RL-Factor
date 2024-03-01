@@ -9,6 +9,7 @@ from ray import air
 from ray import tune
 from ray.tune import registry
 from ray.air.integrations.wandb import WandbLoggerCallback
+from ray.rllib.core.rl_module.rl_module import SingleAgentRLModuleSpec
 from prepare_env import env_creator
 
 
@@ -38,13 +39,13 @@ def get_cli_args():
     )
     parser.add_argument(
           "--algo",
-          choices=["ppo", "dqn", "impala", "icm"],
+          choices=["dreamerv3", "ppo", "dqn", "impala", "icm"],
           default="ppo",
           help="Algorithm to train agents.",
     )
     parser.add_argument(
           "--framework",
-          choices=["tf", "torch"],
+          choices=["tf2", "torch"],
           default="torch",
           help="The DL framework specifier (tf2 eager is not supported).",
     )
@@ -72,34 +73,34 @@ def get_cli_args():
           default="INFO",
           help="The level of training and data flow messages to print.",
     )
-
     parser.add_argument(
           "--wandb",
           action="store_true",
-          # type=bool,
           # default=False,
           help="Whether to use WanDB logging.",
     )
-
+    parser.add_argument(
+          "--factor",
+          action="store_true",
+          default=False,
+          help="Whether to use factor GNN.",
+    )
     parser.add_argument(
           "--env_name",
           default="default",
           help="",
     )
-
     parser.add_argument(
           "--env_id",
           default="default",
           help="",
     )
-
     parser.add_argument(
           "--downsample",
           type=bool,
           default=False,
           help="Whether to downsample substrates in MeltingPot. Defaults to 8.",
     )
-
     parser.add_argument(
           "--as-test",
           action="store_true",
@@ -124,33 +125,53 @@ if __name__ == "__main__":
     #from configs import get_experiment_config
     # hyperparameter search
     from rl_configs import get_experiment_config
+    if args.algo == "dreamerv3":
+        from ray.rllib.algorithms import dreamerv3
+        trainer = "DreamerV3"
+        num_gpus = args.num_gpus
+        default_config = dreamerv3.DreamerV3Config().resources(
+            num_rollout_workers=0,
+            num_learner_workers=0 if num_gpus == 1 else num_gpus,
+            num_gpus_per_learner_worker=1 if num_gpus else 0,
+            num_cpus_for_local_worker=1,
+        )
+        configs, exp_config, tune_config = get_experiment_config(args, default_config)
+
     if args.algo == "ppo":
-      trainer = "PPO"
-      from ray.rllib.algorithms import ppo
-      default_config = ppo.PPOConfig()
-      configs, exp_config, tune_config = get_experiment_config(args, default_config)
+        trainer = "PPO"
+        from ray.rllib.algorithms import ppo
+        default_config = ppo.PPOConfig()
+        configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
     elif args.algo == 'dqn':
-      trainer = "DQN"
-      from ray.rllib.algorithms import dqn
-      default_config = dqn.DQNConfig()
-      configs, exp_config, tune_config = get_experiment_config(args, default_config)
+        trainer = "DQN"
+        from ray.rllib.algorithms import dqn
+        if args.factor:
+            from factor_gnn import FactorGraphRL 
+            from prepare_env import get_factors
+            default_config = dqn.DQNConfig().rl_module(
+              rl_module_spec=SingleAgentRLModuleSpec(module_class=FactorGraphRL,
+                                                     model_config_dict={"factors": get_factors(args.env_name)})
+            )
+        else:
+           default_config = dqn.DQNConfig()
+        configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
     elif args.algo == "impala":
-      trainer = "IMPALA"
-      from ray.rllib.algorithms import impala
-      default_config = impala.ImpalaConfig()
-      configs, exp_config, tune_config = get_experiment_config(args, default_config)
+        trainer = "IMPALA"
+        from ray.rllib.algorithms import impala
+        default_config = impala.ImpalaConfig()
+        configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
     elif args.algo == "icm":
-      assert False
+       assert False
 
     else:
-       print('The selected option is not tested. You may encounter issues if you use the baseline \
-             policy configurations with non-tested algorithms')
+        print('The selected option is not tested. You may encounter issues if you use the baseline \
+              policy configurations with non-tested algorithms')
 
     # Ensure GPU is available if set to True
-    if configs.num_gpus > 0:
+    if configs.num_gpus > 0 and args.framework == "torch":
        import torch
        if torch.cuda.is_available():
           print("Using GPU device.")

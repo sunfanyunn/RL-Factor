@@ -1,4 +1,5 @@
-"""Example of define custom tokenizers for recurrent models in RLModules.
+"""
+Example of define custom tokenizers for recurrent models in RLModules.
 
 This example shows the following steps:
 - Define a custom tokenizer for a recurrent encoder.
@@ -29,9 +30,20 @@ from ray.rllib.utils.framework import try_import_tf, try_import_torch
 from ray.rllib.utils.test_utils import check_learning_achieved
 from ray.rllib.core.models.configs import ModelConfig
 
-
-from factor_gnn import FactorGraphRL
+from ray.rllib.algorithms.ppo.torch.ppo_torch_rl_module import PPOTorchRLModule
+from ray.rllib.core.rl_module.rl_module import RLModuleConfig
+from ray.rllib.utils.nested_dict import NestedDict
 from ray.rllib.core.rl_module.torch.torch_rl_module import TorchRLModule
+
+from ray.rllib.core.rl_module.torch.torch_rl_module import TorchRLModule
+from ray.rllib.core.rl_module.rl_module import RLModuleConfig
+from ray.rllib.utils.nested_dict import NestedDict
+
+import torch
+import torch.nn as nn
+from typing import Mapping, Any
+
+from factor_gnn import FactorGraph
 
 
 parser = argparse.ArgumentParser()
@@ -82,152 +94,87 @@ parser.add_argument(
 # We do this step for tf and for torch here to make the following steps framework-
 # agnostic. However, if you use only one framework, you can skip the other one.
 
-from typing import Mapping, Any
-from ray.rllib.algorithms.ppo.torch.ppo_torch_rl_module import PPOTorchRLModule
-from ray.rllib.core.rl_module.rl_module import RLModuleConfig
-from ray.rllib.utils.nested_dict import NestedDict
+from factor_gnn import FactorGraph
 
 #class FactorGraphRL_(PPOTorchRLModule):
-class FactorGraphRL_(TorchRLModule):
+class FactorGraphRL(TorchRLModule):
     def __init__(self, config: RLModuleConfig) -> None:
         super().__init__(config)
 
     def setup(self):
-        #input_dim = self.config.observation_space.shape[0]
-        #hidden_dim = self.config.model_config_dict["fcnet_hiddens"][0]
-        #output_dim = self.config.action_space.n
-
-        """self.policy = nn.Sequential(
-            nn.Linear(input_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, output_dim),
-        )
-
-        self.input_dim = input_dim"""
-
-        #self.foward_test = FactorGraphRL
-        print("========================================================")
-        print(type(self.config.model_config_dict["factor"]))
-        print("========================================================")
-        self.foward_test = self.config.model_config_dict["factor"]
+        # access the factors
+        factors = self.config.model_config_dict["factors"]
+        print(factors)
+        self.policy = FactorGraph(factors)
 
     def _forward_inference(self, batch: NestedDict) -> Mapping[str, Any]:
-        print("=================================================")
-        print("_forward_inference")
-        print("=================================================")
         with torch.no_grad():
-            #return self._forward_train(batch)
-            return self.foward_test(batch)
+            return self._forward_train(batch)
 
     def _forward_exploration(self, batch: NestedDict) -> Mapping[str, Any]:
-        print("=================================================")
-        print("_forward_exploration")
-        print("=================================================")
         with torch.no_grad():
             return self._forward_train(batch)
 
     def _forward_train(self, batch: NestedDict) -> Mapping[str, Any]:
-        #action_logits = self.policy(batch["obs"])
-        #return {"action_dist": torch.distributions.Categorical(logits=action_logits)}
-        print("=================================================")
-        print("_forward_train")
-        #print(batch)
-        print("=================================================")
-        return self.foward_test(batch)
-
-"""class CustomTorchTokenizer(TorchModel, Encoder):
-    def __init__(self, config) -> None:
-        TorchModel.__init__(self, config)
-        Encoder.__init__(self, config)
-        self.net = nn.Sequential(
-            nn.Linear(config.input_dims[0], config.output_dims[0]),
-        )
-        self.facto_gnn = config.factor_gnn
-
-    # Since we use this model as a tokenizer, we need to define it's output
-    # dimensions so that we know the input dim for the recurent cells that follow.
-    def get_output_specs(self):
-        # In this example, the output dim will be 64, but we still fetch it from
-        # config so that this code is more reusable.
-        output_dim = self.config.output_dims[0]
-        return SpecDict(
-            {ENCODER_OUT: TensorSpec("b, d", d=output_dim, framework="torch")}
-        )
-
-    def _forward(self, inputs: dict, **kwargs):
-        print("====================================")
-        print(self.facto_gnn(inputs[SampleBatch.OBS]))
-        print("====================================")
-        return {ENCODER_OUT: self.net(inputs[SampleBatch.OBS])}
-
-
-class CustomTfTokenizer(TfModel, Encoder):
-    def __init__(self, config) -> None:
-        TfModel.__init__(self, config)
-        Encoder.__init__(self, config)
-
-        self.net = tf.keras.models.Sequential(
-            [
-                tf.keras.layers.Input(shape=config.input_dims),
-                tf.keras.layers.Dense(config.output_dims[0], activation="relu"),
-            ]
-        )
-
-    def get_output_specs(self):
-        output_dim = self.config.output_dims[0]
-        return SpecDict(
-            {ENCODER_OUT: TensorSpec("b, d", d=output_dim, framework="tf2")}
-        )
-
-    def _forward(self, inputs: dict, **kwargs):
-        return {ENCODER_OUT: self.net(inputs[SampleBatch.OBS])}"""
-
-
-# Since RLlib decides during runtime which framework we use, we need to provide a
-# model config that is buildable depending on the framework. The recurrent models
-# will consume this config during runtime and build our custom tokenizer accordingly.
-
-
-"""@dataclass
-class CustomTokenizerConfig(ModelConfig):
-    output_dims: tuple = None
-    factor_gnn = None
-
-    def build(self, framework):
-        if framework == "torch":
-            return CustomTorchTokenizer(self)
-        else:
-            return CustomTfTokenizer(self)"""
-
-
-# We now modify the default Catalog for PPO to inject our config.
-# Alternatively, we could inherit from the PPO RLModule here, which is more
-# straightforward if we want to completely replace
-# the default models. However, we want to keep RLlib's default LSTM Encoder and only
-# place our tokenizer inside of it, so we use the Catalog here for demonstration
-# purposes.
-
-
-"""class CustomPPOCatalog(PPOCatalog):
-    # Note that RLlib expects this to be a classmethod.
-    @classmethod
-    def get_tokenizer_config(
-        cls,
-        observation_space,
-        model_config_dict,
-        view_requirements=None,
-    ) -> ModelConfig:
-        return CustomTokenizerConfig(
-            input_dims=observation_space.shape,
-            output_dims=(64,),
-            factor_gnn = FactorGraphRL
-        )"""
+        # 32, 2
+        print(batch["obs"].shape)
+        import pdb;pdb.set_trace()
+        action_logits = self.policy(batch["obs"])
+        return {"action_dist": torch.distributions.Categorical(logits=action_logits)}
 
 
 if __name__ == "__main__":
     args = parser.parse_args()
+    factors = [
+        {
+            "factor_name": "jump_logic",
+            "used_state_variables": [
+                {"name": "game_over", "type": "bool", "dimensionality": "scalar"},
+                {"name": "jump_velocity", "type": "int", "dimensionality": "scalar"}
+            ],
+            "modified_state_variables": [
+                {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"}
+            ]
+        },
+        {
+            "factor_name": "gravity_logic",
+            "used_state_variables": [
+                {"name": "gravity", "type": "int", "dimensionality": "scalar"}
+            ],
+            "modified_state_variables": [
+                {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"}
+            ]
+        },
+        {
+            "factor_name": "pipe_logic",
+            "used_state_variables": [
+                {"name": "bird_position_x", "type": "int", "dimensionality": "scalar"},
+                {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"},
+                {"name": "bird_size", "type": "int", "dimensionality": "scalar"},
+                {"name": "SCREEN_WIDTH", "type": "int", "dimensionality": "scalar"},
+                {"name": "PIPE_WIDTH", "type": "int", "dimensionality": "scalar"},
+                {"name": "PIPE_GAP", "type": "int", "dimensionality": "scalar"},
+                {"name": "pipe_positions", "type": "list", "dimensionality": "collection"}
+            ],
+            "modified_state_variables": [
+                {"name": "pipe_positions", "type": "list", "dimensionality": "collection"},
+                {"name": "score", "type": "int", "dimensionality": "scalar"},
+                {"name": "game_over", "type": "bool", "dimensionality": "scalar"}
+            ]
+        },
+        {
+            "factor_name": "game_over_logic",
+            "used_state_variables": [
+                {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"},
+                {"name": "SCREEN_HEIGHT", "type": "int", "dimensionality": "scalar"}
+            ],
+            "modified_state_variables": [
+                {"name": "game_over", "type": "bool", "dimensionality": "scalar"}
+            ]
+        }
+    ]
 
-    ray.init(num_cpus=args.num_cpus or None, local_mode=args.local_mode)
+    ray.init(num_cpus=args.num_cpus or None, local_mode=args.local_mode) 
     register_env("RepeatAfterMeEnv", lambda c: RepeatAfterMeEnv(c))
     register_env("RepeatInitialObsEnv", lambda _: RepeatInitialObsEnv())
 
@@ -247,7 +194,9 @@ if __name__ == "__main__":
             vf_loss_coeff=1e-5,
         )
         .rl_module(
-            rl_module_spec=SingleAgentRLModuleSpec(module_class=FactorGraphRL_, model_config_dict={"factor": FactorGraphRL})#catalog_class=CustomPPOCatalog)
+            rl_module_spec=SingleAgentRLModuleSpec(module_class=FactorGraphRL,
+                                                   model_config_dict={"factors": factors})
+                                                   #catalog_class=CustomPPOCatalog)
         )
         # Use GPUs iff `RLLIB_NUM_GPUS` env var set to > 0.
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
