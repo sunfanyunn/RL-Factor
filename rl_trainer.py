@@ -126,6 +126,7 @@ if __name__ == "__main__":
     # hyperparameter search
     from rl_configs import get_experiment_config
     if args.algo == "dreamerv3":
+        assert False
         from ray.rllib.algorithms import dreamerv3
         trainer = "DreamerV3"
         num_gpus = args.num_gpus
