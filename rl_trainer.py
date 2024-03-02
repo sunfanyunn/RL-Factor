@@ -131,32 +131,31 @@ if __name__ == "__main__":
         trainer = "DreamerV3"
         num_gpus = args.num_gpus
         default_config = dreamerv3.DreamerV3Config()
-        #.resources(
-        #    num_learner_workers=0 if num_gpus == 1 else num_gpus,
-        #    num_gpus_per_learner_worker=1 if num_gpus else 0,
-        #    num_cpus_for_local_worker=1,
-        #)
         configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
     if args.algo == "ppo":
         trainer = "PPO"
         from ray.rllib.algorithms import ppo
-        default_config = ppo.PPOConfig()
+        if args.factor:
+            from factor_gnn import FactorGraphRL 
+            from prepare_env import get_factors
+            default_config = ppo.PPOConfig().rl_module(
+              rl_module_spec=SingleAgentRLModuleSpec(module_class=FactorGraphRL,
+                                                     model_config_dict={"factors": get_factors(args.env_name)})
+            )
+        else:
+            default_config = ppo.PPOConfig()
         configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
     elif args.algo == 'dqn':
         trainer = "DQN"
         from ray.rllib.algorithms import dqn
         if args.factor:
-            from factor_gnn import FactorGraphRL 
-            from prepare_env import get_factors
-            default_config = dqn.DQNConfig().rl_module(
-              rl_module_spec=SingleAgentRLModuleSpec(module_class=FactorGraphRL,
-                                                     model_config_dict={"factors": get_factors(args.env_name)})
-            )
+            assert False
         else:
            default_config = dqn.DQNConfig()
         configs, exp_config, tune_config = get_experiment_config(args, default_config)
+
 
     elif args.algo == "impala":
         trainer = "IMPALA"

@@ -31,12 +31,17 @@ class FactorGraph(nn.Module):
         #self.embeddings = {}
         self.factor_dict = {}
 
+        self.variable_names = set()
         for factor in factors:
             self.factor_dict[factor['factor_name']] = []
 
             for var_t in factor['used_state_variables']:
                 input_vars = var_t['name']
                 self.factor_dict[factor['factor_name']].append(input_vars)
+                self.variable_names.add(input_vars)
+            
+            for var_t in factor['modified_state_variables']:
+                self.variable_names.add(input_vars)
 
             # calculate input total dim and output total dim for the factor
             input_dim_t = len(factor['used_state_variables'])
@@ -45,22 +50,13 @@ class FactorGraph(nn.Module):
             # add factor (FactorModule) to factors dict with factor_name
             self.factors[factor['factor_name']] = FactorModule(input_dim_t, output_dim_t)
 
+        self.variable_names = list(sorted(self.variable_names))
 
-    def forward(self, input_obs):
-        # Assuming `inputs` is a dict with state_variable_name: Tensor pairs
-        outputs = {}
-        for factor_name, module in self.factors.items():
-            # Extract input variables for this factor
-            input_tensors = [inputs[var_name] for var_name in self.factor_dict[factor_name]]
 
-            # Concatenate inputs if more than one, else use the single tensor directly
-            input_tensor = torch.cat(input_tensors, dim=-1) if len(input_tensors) > 1 else input_tensors[0]
-            outputs[factor_name] = module(input_tensor)
-        # Implement aggregation and further processing as needed
-        # Example: Summing up outputs, but this depends on your specific application
-        #final_output = torch.sum(torch.stack(list(outputs.values())), dim=0)
-        #return final_output
-        return outputs
+    def forward(self, input):
+        # input comes in the shape of batch_sizse, observation_size
+        input_obs = {self.variable_names[i]: input[:, i] for i in range(input.shape[1])}
+        return self._forward(input_obs)
 
 
     def _forward(self, inputs):
@@ -75,9 +71,8 @@ class FactorGraph(nn.Module):
             outputs[factor_name] = module(input_tensor)
         # Implement aggregation and further processing as needed
         # Example: Summing up outputs, but this depends on your specific application
-        #final_output = torch.sum(torch.stack(list(outputs.values())), dim=0)
-        #return final_output
-        return outputs
+        final_output = torch.sum(torch.stack(list(outputs.values())), dim=0)
+        return final_output
     
 
 class FactorGraphRL(TorchRLModule):
@@ -87,7 +82,6 @@ class FactorGraphRL(TorchRLModule):
     def setup(self):
         # access the factors
         factors = self.config.model_config_dict["factors"]
-        print(factors)
         self.policy = FactorGraph(factors)
 
     def _forward_inference(self, batch: NestedDict) -> Mapping[str, Any]:
@@ -99,8 +93,7 @@ class FactorGraphRL(TorchRLModule):
             return self._forward_train(batch)
 
     def _forward_train(self, batch: NestedDict) -> Mapping[str, Any]:
-        # 32, 2
-        print(batch["obs"].shape)
+        # batch_size x observation_shape
         action_logits = self.policy(batch["obs"])
         return {"action_dist": torch.distributions.Categorical(logits=action_logits)}
 
@@ -169,4 +162,6 @@ if __name__ == "__main__":
             cnt += 1
     assert(cnt == x.shape[0])
 
+    print(inputs)
     r = model(inputs)
+    print(r.shape)
