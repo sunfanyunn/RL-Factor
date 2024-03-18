@@ -3,59 +3,6 @@ import numpy as np
 from ple import PLE
 
 
-def get_factors(env_name):
-    if env_name == "flappy_bird":
-        factors = [
-            {
-                "factor_name": "jump_logic",
-                "used_state_variables": [
-                    {"name": "game_over", "type": "bool", "dimensionality": "scalar"},
-                    {"name": "jump_velocity", "type": "int", "dimensionality": "scalar"}
-                ],
-                "modified_state_variables": [
-                    {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"}
-                ]
-            },
-            {
-                "factor_name": "gravity_logic",
-                "used_state_variables": [
-                    {"name": "gravity", "type": "int", "dimensionality": "scalar"}
-                ],
-                "modified_state_variables": [
-                    {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"}
-                ]
-            },
-            {
-                "factor_name": "pipe_logic",
-                "used_state_variables": [
-                    {"name": "bird_position_x", "type": "int", "dimensionality": "scalar"},
-                    {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"},
-                    {"name": "bird_size", "type": "int", "dimensionality": "scalar"},
-                    {"name": "SCREEN_WIDTH", "type": "int", "dimensionality": "scalar"},
-                    {"name": "PIPE_WIDTH", "type": "int", "dimensionality": "scalar"},
-                    {"name": "PIPE_GAP", "type": "int", "dimensionality": "scalar"},
-                    {"name": "pipe_positions", "type": "list", "dimensionality": "collection"}
-                ],
-                "modified_state_variables": [
-                    {"name": "pipe_positions", "type": "list", "dimensionality": "collection"},
-                    {"name": "score", "type": "int", "dimensionality": "scalar"},
-                    {"name": "game_over", "type": "bool", "dimensionality": "scalar"}
-                ]
-            },
-            {
-                "factor_name": "game_over_logic",
-                "used_state_variables": [
-                    {"name": "bird_position_y", "type": "int", "dimensionality": "scalar"},
-                    {"name": "SCREEN_HEIGHT", "type": "int", "dimensionality": "scalar"}
-                ],
-                "modified_state_variables": [
-                    {"name": "game_over", "type": "bool", "dimensionality": "scalar"}
-                ]
-            }
-        ]
-        return factors
-    else:
-        assert False
 
 class PygameEnv(gym.Env):
     """Custom Environment that follows gym interface"""

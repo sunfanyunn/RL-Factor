@@ -1,8 +1,8 @@
 import numpy as np
 import ray
 from ray.rllib.algorithms import ppo, dqn, impala
-#from ray.tune import checkpoint_manager as cm
 from ray.tune import registry
+#from ray.tune import checkpoint_manager as cm
 
 
 def eval_one_episode(trainer, env):
@@ -20,8 +20,7 @@ def eval_one_episode(trainer, env):
 
 def evaluate(env_creator, best_checkpoint_path, NUM_TRIALS=10):
     # Initialize Ray
-    ray.init(_temp_dir='/data2/sunfanyun/tmp',
-             ignore_reinit_error=True)
+    ray.init(ignore_reinit_error=True)
     # Register environment
     registry.register_env("my_env", env_creator)
     env = env_creator()
