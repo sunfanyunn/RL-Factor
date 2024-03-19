@@ -1,5 +1,9 @@
-ray==2.9.2
+ray[rllib]==2.9.2
 numpy
 pygame
 openai
 gym
+
+torch
+tensorflow
+wandb

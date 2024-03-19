@@ -137,11 +137,12 @@ if __name__ == "__main__":
         trainer = "PPO"
         from ray.rllib.algorithms import ppo
         if args.factor:
-            from factor_gnn import FactorGraphRL 
-            from prepare_env import get_factors
+            # from factor_gnn import FactorGraphRL 
+            # from prepare_env import get_factors
             default_config = ppo.PPOConfig().rl_module(
-              rl_module_spec=SingleAgentRLModuleSpec(module_class=FactorGraphRL,
-                                                     model_config_dict={"factors": get_factors(args.env_name)})
+            #   rl_module_spec=SingleAgentRLModuleSpec(module_class=FactorGraphRL,
+            #                                          model_config_dict={"factors": get_factors(args.env_name)})
+               rl_module_spec=SingleAgentRLModuleSpec()
             )
         else:
             default_config = ppo.PPOConfig()
