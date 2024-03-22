@@ -136,24 +136,13 @@ if __name__ == "__main__":
     if args.algo == "ppo":
         trainer = "PPO"
         from ray.rllib.algorithms import ppo
-        if args.factor:
-            from factor_gnn import FactorGraphRL 
-            from prepare_env import get_factors
-            default_config = ppo.PPOConfig().rl_module(
-              rl_module_spec=SingleAgentRLModuleSpec(module_class=FactorGraphRL,
-                                                     model_config_dict={"factors": get_factors(args.env_name)})
-            )
-        else:
-            default_config = ppo.PPOConfig()
+        default_config = ppo.PPOConfig()
         configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
     elif args.algo == 'dqn':
         trainer = "DQN"
         from ray.rllib.algorithms import dqn
-        if args.factor:
-            assert False
-        else:
-           default_config = dqn.DQNConfig()
+        default_config = dqn.DQNConfig()
         configs, exp_config, tune_config = get_experiment_config(args, default_config)
 
 
