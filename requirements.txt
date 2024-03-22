@@ -1,5 +1,13 @@
+torch
 ray==2.9.2
+ray[tune]
+pyarrow
+pandas
 numpy
 pygame
 openai
-gym
+gymnasium
+dm_tree
+scikit-image
+wandb
+lz4

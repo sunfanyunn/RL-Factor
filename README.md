@@ -8,6 +8,13 @@ This repository aims to:
 
 We are using the PyGame environments here https://github.com/ntasfi/PyGame-Learning-Environment/tree/master
 
+## Environment setup
+
+```
+conda env create -n ray python=3.9
+pip install -r requirements.txt
+```
+
 ## Directory Structure
 - `env_design/generated_envs`: you can find generated environments here
 - `env_design/wrapped_envs`: you can find how we previously wrapped around the generated environments here
