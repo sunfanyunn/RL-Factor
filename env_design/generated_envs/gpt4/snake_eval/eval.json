@@ -1,0 +1,1738 @@
+{
+    "game": "snake",
+    "gpt4_one_shot": [
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f464d953080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f464d93dd40>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f464d93d3c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f464d93d3c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f2df2423580>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f2df24a7f80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f0d3382c1c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fc0e1751540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fc0e1695a00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fc0e1751540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fc0e1695a00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f547566f740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'UnboundLocalError'>, UnboundLocalError(\"local variable 'font' referenced before assignment\"), <traceback object at 0x7f5475613d00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'UnboundLocalError'>, UnboundLocalError(\"local variable 'font' referenced before assignment\"), <traceback object at 0x7f5475613200>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f5475613640>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f812eb14fc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f812ea29cc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f812ea29d40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f656a75cfc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f656a75cbc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f656a75c800>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fa3c28ab040>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fa3c289c7c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fa3c289c180>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f293456ba80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f2946639100>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f26df2ebfc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Event' object has no attribute 'key'\"), <traceback object at 0x7f26df1f0380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f27053bcd00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f3d7da3f440>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f3d7d9c6040>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fcb198ae080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fcb198a7480>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fcb198a7700>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f7472cfef00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f7484e120c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f6a740c4c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f6a7403b840>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f26888e4dc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f26887ec200>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'length'\"), <traceback object at 0x7f26887ec200>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fc19906a740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fc198fd9900>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fc198fd9580>)",
+                "status": "ERROR"
+            }
+        ]
+    ],
+    "gpt4_one_shot_token": [
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847,
+        847
+    ],
+    "gpt4_one_shot_debug": [
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f6c849f2640>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f6c842ca4c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7ff3c492cf80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7ff3c48bb8c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('1 != 2'), <traceback object at 0x7f2e4de46880>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7faa4d0d3980>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7faa5f18b3c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('1 != 2'), <traceback object at 0x7f2f0b9ecb80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f8793ad9840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'length'\"), <traceback object at 0x7f87937f8cc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'rect'\"), <traceback object at 0x7fe5e4317080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fe5e430bc00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fe5e430b5c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fe5e430b880>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f7362891780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f736287bc80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fa3c28ab040>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fa3c289c7c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fa3c289c180>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f25df344cc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f25df334b80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f25df334b00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f2605c1b100>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f09d4c9b200>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f09d4bce040>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7ff6dcfd4b00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7ff6ef0ecdc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7ff6ef0ec4c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7ff6dcf5a280>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f5c2e682680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5c0c4d0e80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f5c0c4d0880>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fd961f27ac0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fd961f18cc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fd961f18480>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fd961f189c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f841c4efc80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f841c47fe00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f09c945f8c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f09e35f8840>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f5ffc902580>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f5ffc909800>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f8918fb6f00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f8918f28d40>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'length'\"), <traceback object at 0x7f8918f283c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7efc5b820ec0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7efc5b72f6c0>)",
+                "status": "ERROR"
+            }
+        ]
+    ],
+    "gpt4_one_shot_debug_token": [
+        14127,
+        19936,
+        20108,
+        6845,
+        19281,
+        9144,
+        19064,
+        20513,
+        2883,
+        19779,
+        847,
+        4614,
+        13062,
+        20029,
+        847,
+        19531,
+        2762,
+        847,
+        4412
+    ],
+    "gpt4_sequential_debug": [
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'rect'\"), <traceback object at 0x7fdaa39c6c00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fdaa39b0fc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'rect'\"), <traceback object at 0x7f2935b1c880>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f290f9715c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fc9463fb740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fc94636ea80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fc94636ec00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fc94636ed40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f659dcb1b80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f659dbed4c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f0ab40fee00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f0aa1f5f680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f0aa1f5f740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f0aa1f5fe00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fa4c39981c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fa4c391d740>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'rect'\"), <traceback object at 0x7f8c00987940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f8c0090e880>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'rect'\"), <traceback object at 0x7f58cde15880>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f58cde0e380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f58cde0e980>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'length'\"), <traceback object at 0x7f58ce040640>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'rect'\"), <traceback object at 0x7fbea4591c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fbea4582700>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fbea45826c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fb44348f640>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fb443483980>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fb4434faf40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'length'\"), <traceback object at 0x7fb4434fafc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f5f7ae04600>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f5f7a987cc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f5f7a987780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f5f7a987cc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f3a5833fe40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f3a583b7b80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fcfe24aee00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fcfe242fa00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fcfe242fa00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fcfe242fa00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7efe35daacc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7efe35daa6c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7efe35f7a200>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f0082488b80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f00823bbc80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f00823bb440>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f00823c2f40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7fee7cfacd80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7fee8f07efc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7ff09d7a7340>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7ff09d720dc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7ff09d720f00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7ff09d720f80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f481175dbc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f4827846800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f481169e380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'length'\"), <traceback object at 0x7f4827840900>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f479b22c0c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_food_placement",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Food' object has no attribute 'randomize_position'\"), <traceback object at 0x7f6186e51e40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_snake_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f6164cb79c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_direction_change",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f6164cb7580>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_snake_growth",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Snake' object has no attribute 'rect'\"), <traceback object at 0x7f6164cb79c0>)",
+                "status": "ERROR"
+            }
+        ]
+    ],
+    "gpt4_sequential_debug_token": [
+        42951,
+        106539,
+        29776,
+        63090,
+        13907,
+        54863,
+        51227,
+        69687,
+        87361,
+        21092,
+        48316,
+        57148,
+        39680,
+        66550,
+        39548,
+        78495,
+        71010,
+        17374,
+        62037,
+        13733
+    ],
+    "gpt4_one_shot_acc": 0.36,
+    "gpt4_one_shot_debug_acc": 0.48,
+    "gpt4_sequential_debug_acc": 0.39000000000000007
+}

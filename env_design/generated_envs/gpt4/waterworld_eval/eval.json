@@ -1,0 +1,1762 @@
+{
+    "game": "waterworld",
+    "gpt4_one_shot": [
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f52dbc36500>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('2 != 1'), <traceback object at 0x7f90376cb700>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('320 != 340'), <traceback object at 0x7fedce868f80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fedce800d40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f553029fb00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f5530231540>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('310 != 330'), <traceback object at 0x7f9d98215880>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f9d981a0880>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'NameError'>, NameError(\"name 'BLACK' is not defined\"), <traceback object at 0x7f9ee64b3c00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'NameError'>, NameError(\"name 'BLACK' is not defined\"), <traceback object at 0x7f9ee64b1680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'NameError'>, NameError(\"name 'BLACK' is not defined\"), <traceback object at 0x7f9ee64b64c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('320 != 340'), <traceback object at 0x7fa1c3a11080>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'draw'\"), <traceback object at 0x7eff511dd240>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'draw'\"), <traceback object at 0x7eff511de300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7eff511de280>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('320 != 340'), <traceback object at 0x7f84212a11c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fedb7c3b880>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('0 != 1'), <traceback object at 0x7f64ce768f00>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7faf1eeacd80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7ff8ff9aa3c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'GroupSingle' object has no attribute 'rect'\"), <traceback object at 0x7f7f2c0f1540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'GroupSingle' object has no attribute 'rect'\"), <traceback object at 0x7f7f2c017240>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f7f2c07f280>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "message": "(<class 'IndexError'>, IndexError('list index out of range'), <traceback object at 0x7fedf06d1980>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'IndexError'>, IndexError('list index out of range'), <traceback object at 0x7fedf0658fc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "message": "(<class 'IndexError'>, IndexError('list index out of range'), <traceback object at 0x7fedf0658e00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'IndexError'>, IndexError('list index out of range'), <traceback object at 0x7fedf0658f40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'IndexError'>, IndexError('list index out of range'), <traceback object at 0x7fedf06580c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'NameError'>, NameError(\"name 'BLACK' is not defined\"), <traceback object at 0x7fd805388b40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'NameError'>, NameError(\"name 'BLACK' is not defined\"), <traceback object at 0x7fd8053fff40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'NameError'>, NameError(\"name 'BLACK' is not defined\"), <traceback object at 0x7fd8053915c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('320 != 340'), <traceback object at 0x7fe5ac6b7440>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fe5ac6d4140>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'super' object has no attribute 'reset'\"), <traceback object at 0x7fd9d2b2bf80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'super' object has no attribute 'reset'\"), <traceback object at 0x7fd9d2a40cc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'super' object has no attribute 'reset'\"), <traceback object at 0x7fd9d2ab3040>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'super' object has no attribute 'reset'\"), <traceback object at 0x7fd9d2ab36c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'super' object has no attribute 'reset'\"), <traceback object at 0x7fd9d2ab3ac0>)",
+                "status": "ERROR"
+            }
+        ]
+    ],
+    "gpt4_one_shot_token": [
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039,
+        1039
+    ],
+    "gpt4_one_shot_debug": [
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7ff12094e080>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('2 != 1'), <traceback object at 0x7f90376cb700>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 1 required positional argument: 'pos'\"), <traceback object at 0x7f3d8be382c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('310 != 330'), <traceback object at 0x7f3d8bdc6d00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 1 required positional argument: 'pos'\"), <traceback object at 0x7f3d8be3c7c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('310 != 330'), <traceback object at 0x7f9d98215880>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f9d981a0880>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fe42a4cc180>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fe42a5437c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fe42a542300>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fe2ec0bca40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fe2ec0c8300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fe2ec134ec0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'AssertionError'>, AssertionError('(560, 100) == (560, 100)'), <traceback object at 0x7fcce7c7cdc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('310 != 330'), <traceback object at 0x7fcce7c7d400>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fcce7c0fc40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('310 != 330'), <traceback object at 0x7fc95a276b00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7efeeee66580>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f970ed4e680>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "message": "(<class 'AssertionError'>, AssertionError('True is not false'), <traceback object at 0x7f260b0f71c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f260b0fe340>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'GroupSingle' object has no attribute 'rect'\"), <traceback object at 0x7f34ad18a080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'GroupSingle' object has no attribute 'rect'\"), <traceback object at 0x7f34ad188200>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f34ad119280>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fa5d1db3c80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'AssertionError'>, AssertionError('(0, 0) == (0, 0)'), <traceback object at 0x7faf81e14ac0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7faf81e21cc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'circles'\"), <traceback object at 0x7f1cd9786a40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'circles'\"), <traceback object at 0x7f1cd9782a40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'circles'\"), <traceback object at 0x7f1cd97835c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'reset'\"), <traceback object at 0x7f89086d5fc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('310 != 330'), <traceback object at 0x7f89086d6b00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ]
+    ],
+    "gpt4_one_shot_debug_token": [
+        24968,
+        25248,
+        12198,
+        16993,
+        25214,
+        24303,
+        22420,
+        24629,
+        15864,
+        12820,
+        8875,
+        8808,
+        8067,
+        3688,
+        5940,
+        5645,
+        23996,
+        5971,
+        20677,
+        3499
+    ],
+    "gpt4_sequential_debug": [
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f939997bb00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fbb077790c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('310 != 330'), <traceback object at 0x7f4d9a611900>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f4d9a5c1640>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('310 != 330'), <traceback object at 0x7fc1df3c5900>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fc1df3d10c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 1 required positional argument: 'game'\"), <traceback object at 0x7f86caae1700>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 1 required positional argument: 'game'\"), <traceback object at 0x7f86caae0100>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('0 != 1'), <traceback object at 0x7f4e4a072480>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'NameError'>, NameError(\"name 'game' is not defined\"), <traceback object at 0x7ff764fd91c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'NameError'>, NameError(\"name 'game' is not defined\"), <traceback object at 0x7ff764f6f2c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7ff764fdc640>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f31a46de880>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f31a46dac40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f31a46da700>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('0 != 1'), <traceback object at 0x7fc090fa2d40>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f7ee9743380>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f06f81c8040>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "message": "(<class 'AssertionError'>, AssertionError('True is not false'), <traceback object at 0x7fa06a91b580>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fa06a91d540>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7f9fd4a6ccc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'all_sprites'\"), <traceback object at 0x7fd598e983c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_circle_spawning",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 7,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_reset",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_movement",
+                "test_number": 1,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_score_update",
+                "test_number": 4,
+                "status": "OK"
+            }
+        ]
+    ],
+    "gpt4_sequential_debug_token": [
+        110230,
+        176734,
+        106044,
+        63328,
+        20732,
+        156716,
+        65665,
+        23410,
+        69108,
+        56094,
+        50545,
+        95005,
+        91444,
+        84331,
+        70576,
+        163414,
+        209112,
+        86571,
+        48641,
+        158439
+    ],
+    "gpt4_one_shot_acc": 0.54,
+    "gpt4_one_shot_debug_acc": 0.64,
+    "gpt4_sequential_debug_acc": 0.7800000000000001
+}

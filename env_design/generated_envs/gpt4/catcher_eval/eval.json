@@ -1,0 +1,1527 @@
+{
+    "game": "catcher",
+    "gpt4_one_shot": [
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fdb898f8d80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fdb89800900>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fdb89800600>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fdb898004c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f551a92f6c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f551a92f4c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5fa33b9940>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5fa33b5cc0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7fd98344e4c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7fd9832f6900>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fd9832f6d00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fd9832f6d40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f8093f3ad00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f8093ec6380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f8093ec6c00>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fa4c8f1db00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fa4c8f7bb00>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fd0ded19e40>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'dx'\"), <traceback object at 0x7f6ecc767840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'dx'\"), <traceback object at 0x7f6ecc769300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'dx'\"), <traceback object at 0x7f6ecc769780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'dx'\"), <traceback object at 0x7f6ecc769700>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fcd3fdc0980>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fcd3fe35700>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fcd3fe35b00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fcd3fe2d940>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f90b3a7fac0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f90b3a7f300>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5b74d78840>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5b74d78cc0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f1868b6a380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f1868bd1e80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f1868bd1980>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'direction'\"), <traceback object at 0x7efc5fc3f100>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'direction'\"), <traceback object at 0x7efc5fc3b680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'direction'\"), <traceback object at 0x7efc5fc3b480>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'direction'\"), <traceback object at 0x7efc5fc3bb80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'list' object has no attribute 'sprites'\"), <traceback object at 0x7f19faa79a00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'list' object has no attribute 'sprites'\"), <traceback object at 0x7f19faaef4c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'list' object has no attribute 'sprites'\"), <traceback object at 0x7f19faaef600>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'list' object has no attribute 'sprites'\"), <traceback object at 0x7f19faaef540>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.Surface' object has no attribute 'filleshoot'\"), <traceback object at 0x7ff50133c4c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.Surface' object has no attribute 'filleshoot'\"), <traceback object at 0x7ff5012c3300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.Surface' object has no attribute 'filleshoot'\"), <traceback object at 0x7ff5012c33c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.Surface' object has no attribute 'filleshoot'\"), <traceback object at 0x7ff5012c3540>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f77017c5640>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f77017c51c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f8aadb617c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f8aadbd0dc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f8aadbdbc40>)",
+                "status": "FAIL"
+            }
+        ]
+    ],
+    "gpt4_one_shot_token": [
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742,
+        742
+    ],
+    "gpt4_one_shot_debug": [
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Catcher' object has no attribute 'draw'\"), <traceback object at 0x7f7934a8cf00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f7934a91c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Catcher' object has no attribute 'draw'\"), <traceback object at 0x7f7934a91740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Catcher' object has no attribute 'draw'\"), <traceback object at 0x7f7934a91080>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'keys'\"), <traceback object at 0x7f144b5ce540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f14717863c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'keys'\"), <traceback object at 0x7f144b633080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'keys'\"), <traceback object at 0x7f144b633580>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('0 != 1'), <traceback object at 0x7f65e049b600>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f65e049b540>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f65e049b4c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f000da2c700>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f000da2c400>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f000da2c580>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f000da2c180>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f4c159d5fc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f4c15968840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f4c15968580>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f4c159681c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fc56f128dc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fc56f0b4500>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fc56f0b8e00>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7fadb43eef80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7fadb4180640>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fadb4180040>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fadb4180c40>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7fae45f89940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7fae45f82140>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'keys'\"), <traceback object at 0x7fae45f82940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'keys'\"), <traceback object at 0x7fae45f82840>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f70d7ceec00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f70d7c82300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f70d7c86500>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f70d7c869c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f6cda77e7c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f6cc8653740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f6cc86538c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f6cc8653400>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f1e315ecb80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f1e315ec400>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f87b68b9cc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f87b683ff80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f87b683f340>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f87b683f540>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f4cb4da8040>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f4cb4d9a340>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f4cb4d9ad80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f4cb4d9ae80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7efe1659abc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7efe16600b00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7efe16600080>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7efe1658c340>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f1868b6a380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f1868bd1e80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f1868bd1980>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f5da0977e40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f5da0903240>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5da0903780>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5da0903b80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fea8e7c2f40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fea8e83b380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fea8e83b280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7fea8e83b980>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f21ceb06d80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f21ceb06200>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f116d38a880>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f116d3ff500>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f116d3f8cc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f116d400d00>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fdef262b680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fdef25b5980>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fdef25b5800>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fdef25b5f40>)",
+                "status": "FAIL"
+            }
+        ]
+    ],
+    "gpt4_one_shot_debug_token": [
+        17966,
+        16487,
+        3924,
+        17263,
+        7004,
+        14171,
+        12174,
+        16832,
+        9870,
+        16666,
+        12347,
+        8406,
+        16188,
+        16401,
+        7322,
+        17535,
+        17060,
+        3864,
+        15082,
+        17274
+    ],
+    "gpt4_sequential_debug": [
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fb1aab77380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fb1aaaff4c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fb1aaaff9c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fb1aaaffc40>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f762f41ed80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f762f334d40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f762f32d240>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f8bc4e2cb40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f8bc4e1cac0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f8bc4e1c040>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f8bc4e1c4c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7efe38fc41c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7efe3903b400>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7efe39041c80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7efe39041280>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f82ec00eb00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f82ec012fc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f82ec0123c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f82ec012400>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f9052150ac0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f90521c35c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f90521c3700>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f90521c39c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f3095c73a40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f3095cde1c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f3095cde880>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f3095cde840>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f3cd3d40200>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f3cd3d40100>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f3cd3d40d80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f3cd3d40bc0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fc1121abc40>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fc112224f00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fc1121a5280>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fc112137100>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f12d4e97bc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f12d4e972c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f1009b6b7c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f1009b6ff00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f1009b6f700>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f1009b6ff80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f2a5466d540>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2a546dfd00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f2a546dfb80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'TypeError'>, TypeError('run() takes 1 positional argument but 2 were given'), <traceback object at 0x7f2a546dff80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7fd3992990c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7fd3991a7100>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fd3991ac880>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7fd3991ac800>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fa434ecef40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fa434f49bc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fa434ed9300>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f3e64a41dc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f3e64ab4cc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f3e64ab4680>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f3e64ab4480>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f3327679f00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f3327601500>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f3327601480>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f3327601d80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f8fee909280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7f8fee891d40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f8fee8917c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7f8fee891980>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Group' object has no attribute 'sprite'\"), <traceback object at 0x7f9a644c5bc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7f9a642ea7c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Group' object has no attribute 'sprite'\"), <traceback object at 0x7f9a642ea800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7f9a642ea740>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'balls'\"), <traceback object at 0x7f2cf494b800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7f2cf49b2d80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7f2cf49b2440>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'catcher'\"), <traceback object at 0x7f2cf49b2300>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_ball_update",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f9b99334040>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision_score_update",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f9b99277780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_game_over",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f9b99277e00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_handle_events_catcher_movement",
+                "test_number": 1,
+                "status": "OK"
+            }
+        ]
+    ],
+    "gpt4_sequential_debug_token": [
+        131877,
+        122118,
+        48777,
+        87660,
+        56318,
+        84756,
+        46692,
+        125952,
+        59717,
+        86567,
+        46906,
+        77861,
+        67229,
+        57553,
+        22699,
+        72757,
+        44645,
+        124249,
+        25300,
+        46666
+    ],
+    "gpt4_one_shot_acc": 0.225,
+    "gpt4_one_shot_debug_acc": 0.075,
+    "gpt4_sequential_debug_acc": 0.0625
+}

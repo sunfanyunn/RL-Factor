@@ -1,0 +1,1560 @@
+{
+    "game": "flappy_bird",
+    "gpt4_one_shot": [
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f40fc35e940>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f40fc35e5c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError('set.add() takes exactly one argument (2 given)'), <traceback object at 0x7ff3256bc7c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7ff3256bce80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7ff337851c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError('set.add() takes exactly one argument (2 given)'), <traceback object at 0x7ff3256ad1c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f66bfe07480>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f66bfe07cc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f367cdcd7c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f367cdcd680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fe7f3707fc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fe7f3707340>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fe7f3707280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fa3d90332c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fa3d9033e80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fa3d9033b00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff6240>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff6a80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff61c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f6b8e524e80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f6b8e4ab880>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f6b8e4abd40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f2add656d00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2add6525c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2add64ff80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'bird'\"), <traceback object at 0x7f9546f46fc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f9546e5d800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f9558e26700>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f9546d04080>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fa1a5c97cc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fa1a5d12500>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fc6d2736800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fc6d26bdc80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fc6d26bdf80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f2e1890d7c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2e18912f40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2e18912e40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f492fc87680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f4955e33580>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f744d4c47c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f744d4b46c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f744d4b41c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fe1474ac180>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fe1474ac580>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fbb935732c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fbb934b2380>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7ff0b00b9140>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7ff0b00a9540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7ff0b00a9780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f2b092d2e80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2b0934d540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2b09348c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ]
+    ],
+    "gpt4_one_shot_token": [
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736,
+        736
+    ],
+    "gpt4_one_shot_debug": [
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f40fc35e940>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f40fc35e5c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f67b5e17280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f67b5e17b80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f0e42b99bc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f0e54d4ccc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f0e42c14180>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f004e855200>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f004e855c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fc716edfdc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fc73d098e40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff6240>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff6a80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff61c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff6240>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff6a80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8771ff61c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f8023535340>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f80234bc680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f80234bc740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5e3a5c2640>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f5e3a549c00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f5e3a5495c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7faa9e1bfc00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7faa9e1bf4c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7faa9e1bf3c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7faa9e1bf2c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7ff179822880>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7ff179822340>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f74724de180>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f74724de6c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f74724de9c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f5435377480>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f543537d480>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f543537d840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f4e97486b40>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f4e974863c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f4e97486080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f0657583a80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f065757b8c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f065757b3c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f065757bd80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f6471f820c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f644bbbbf40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f8b608fdf00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8b608f9380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8b608f9480>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f8b608f99c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f2b092d2e80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2b0934d540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2b09348c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fa4c821fdc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fa4c821fcc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fa4c821f4c0>)",
+                "status": "ERROR"
+            }
+        ]
+    ],
+    "gpt4_one_shot_debug_token": [
+        2464,
+        736,
+        18065,
+        7780,
+        736,
+        14454,
+        736,
+        736,
+        10722,
+        4187,
+        17491,
+        17609,
+        17546,
+        17511,
+        7577,
+        4118,
+        736,
+        8885,
+        12513,
+        17857
+    ],
+    "gpt4_sequential_debug": [
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fde04d4db80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fde04d4d780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f84433cce00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f844333fbc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f844333f300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f844333f040>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fc59846c380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fc59846cf40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7fc59846c140>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fdec632fa80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fdec632f7c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fdec632f440>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fb63874ad00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fb63874e9c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fb63874ed00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f08fd5ab740>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f08fd5a6540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f08fd5a1c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f6bd588b7c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f6bd588b3c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f6bd588b6c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'NameError'>, NameError(\"name 'game' is not defined\"), <traceback object at 0x7f1ec2ef6f40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f1ed50240c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f1ec2e89b80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f1ec2e89dc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fcfde562580>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fcff0709bc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f294bd41780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f294bd57040>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f294bd57b00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f294bd57f80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f34676ed200>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f34676ed500>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f34676ed9c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'pipes'\"), <traceback object at 0x7f34676ed480>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f35e033d200>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f35f25e4740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2a7bf01b40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2a7bf01f00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f1ee05ae440>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f1ee05aec80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f2daecc7a40>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2daecb0940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f2daecb7d40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f0a436bbec0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f0a436bb3c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7fef92e98380>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fef92e1f740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7fef92e1f500>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f0043675640>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f002ca02e00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f243ac74840>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f243abfc200>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f243abfc800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_bird_flap",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_bird_passes_pipe",
+                "test_number": 6,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f9c37ec3dc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_collision",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"'Group' object is not subscriptable\"), <traceback object at 0x7f9c37ec3540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_pipe_logic",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ]
+    ],
+    "gpt4_sequential_debug_token": [
+        17795,
+        24226,
+        123278,
+        49606,
+        34449,
+        38469,
+        127168,
+        14425,
+        21101,
+        141191,
+        57122,
+        94814,
+        56693,
+        49325,
+        59507,
+        72403,
+        22664,
+        17634,
+        54187,
+        31421
+    ],
+    "gpt4_one_shot_acc": 0.325,
+    "gpt4_one_shot_debug_acc": 0.2875,
+    "gpt4_sequential_debug_acc": 0.3
+}

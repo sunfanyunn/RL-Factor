@@ -1,0 +1,1492 @@
+{
+    "game": "puckworld",
+    "gpt4_one_shot": [
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'draw'\"), <traceback object at 0x7f1b51f75900>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'draw'\"), <traceback object at 0x7f1b51ff3680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'draw'\"), <traceback object at 0x7f1b51ff3740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'ValueError'>, ValueError(\"Can't normalize Vector of length Zero\"), <traceback object at 0x7f1b51ff3880>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'ZeroDivisionError'>, ZeroDivisionError('float division by zero'), <traceback object at 0x7f5687201180>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'ZeroDivisionError'>, ZeroDivisionError('float division by zero'), <traceback object at 0x7fc46c8b7800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'ZeroDivisionError'>, ZeroDivisionError('float division by zero'), <traceback object at 0x7fc46c8b0780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'NameError'>, NameError(\"name 'Vector2' is not defined\"), <traceback object at 0x7f97b0de4800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'NameError'>, NameError(\"name 'Vector2' is not defined\"), <traceback object at 0x7f97b0d6d300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'NameError'>, NameError(\"name 'Vector2' is not defined\"), <traceback object at 0x7f97b0d6d400>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'NameError'>, NameError(\"name 'Vector2' is not defined\"), <traceback object at 0x7f97b0d6d5c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'NameError'>, NameError(\"name 'running' is not defined\"), <traceback object at 0x7ff2614c2b40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'NameError'>, NameError(\"name 'running' is not defined\"), <traceback object at 0x7ff26153b900>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'NameError'>, NameError(\"name 'running' is not defined\"), <traceback object at 0x7ff26153b8c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'NameError'>, NameError(\"name 'running' is not defined\"), <traceback object at 0x7ff26153bc40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f391312a180>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f391312fec0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f391312fbc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f391312f200>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('91 == 91'), <traceback object at 0x7f3f0abe0ac0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(260, 180) == (260, 180)'), <traceback object at 0x7f3f0abe0840>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'NameError'>, NameError(\"name 'Agent' is not defined\"), <traceback object at 0x7ff8eeafeb80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'NameError'>, NameError(\"name 'Agent' is not defined\"), <traceback object at 0x7ff8eea85e40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'NameError'>, NameError(\"name 'Agent' is not defined\"), <traceback object at 0x7ff8eea85e80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'NameError'>, NameError(\"name 'Agent' is not defined\"), <traceback object at 0x7ff8eea854c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'NameError'>, NameError(\"name 'K_a' is not defined\"), <traceback object at 0x7f2cec391340>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'NameError'>, NameError(\"name 'K_a' is not defined\"), <traceback object at 0x7f2cec2d57c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'NameError'>, NameError(\"name 'K_a' is not defined\"), <traceback object at 0x7f2cec2d5880>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'NameError'>, NameError(\"name 'K_a' is not defined\"), <traceback object at 0x7f2cec2d5680>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(97), <traceback object at 0x7f94186fd080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f9418768100>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f94186fb480>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f94186fb780>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f9de6679400>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f9de6669300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f9de66e1a40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f9de66e1740>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(97), <traceback object at 0x7fef50f3abc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(97), <traceback object at 0x7f35e38a4440>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f35e388c300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f35e389d180>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f35e389d600>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f835c01fc40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f835c0896c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f836df1f780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f835c01ac80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.math.Vector2' object has no attribute 'normalize_or_zero'\"), <traceback object at 0x7ff82b653ac0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.math.Vector2' object has no attribute 'normalize_or_zero'\"), <traceback object at 0x7ff82b655140>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.math.Vector2' object has no attribute 'normalize_or_zero'\"), <traceback object at 0x7ff82b6558c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.math.Vector2' object has no attribute 'normalize_or_zero'\"), <traceback object at 0x7ff82b6552c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(310, 230) == (310, 230)'), <traceback object at 0x7ff8185dbfc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(290, 210) == (290, 210)'), <traceback object at 0x7ff818562080>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(97), <traceback object at 0x7f2c21193080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'ZeroDivisionError'>, ZeroDivisionError('float division by zero'), <traceback object at 0x7f2c21189540>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(97), <traceback object at 0x7f123297a840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AssertionError'>, AssertionError('(356, 37) == (356, 37)'), <traceback object at 0x7f123296a200>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(305, 225) == (305, 225)'), <traceback object at 0x7f123296a600>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7ff7f23c9280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'ValueError'>, ValueError(\"Can't normalize Vector of length Zero\"), <traceback object at 0x7ff7f234e140>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'ValueError'>, ValueError(\"Can't normalize Vector of length Zero\"), <traceback object at 0x7ff7f234e8c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'ValueError'>, ValueError(\"Can't normalize Vector of length Zero\"), <traceback object at 0x7ff7f234e2c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7fe9ede16680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7fe9ede8a9c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7fe9ede8ad40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7fe9ede19280>)",
+                "status": "ERROR"
+            }
+        ]
+    ],
+    "gpt4_one_shot_token": [
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799,
+        799
+    ],
+    "gpt4_one_shot_debug": [
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'agent'\"), <traceback object at 0x7f2fe31e7e80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'green_dot'\"), <traceback object at 0x7f2fe31e7f40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'green_dot'\"), <traceback object at 0x7f2fe31e7ec0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'red_puck'\"), <traceback object at 0x7f2fe31e7e80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'target'\"), <traceback object at 0x7feda41f7280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'target'\"), <traceback object at 0x7feda425f800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'target'\"), <traceback object at 0x7feda425f580>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'target'\"), <traceback object at 0x7feda425fb80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(260, 180) == (260, 180)'), <traceback object at 0x7fedc7a6b480>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.math.Vector2' object has no attribute 'limit'\"), <traceback object at 0x7fd1ec532b00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.math.Vector2' object has no attribute 'limit'\"), <traceback object at 0x7fd1ec5a4f80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.math.Vector2' object has no attribute 'limit'\"), <traceback object at 0x7fd1ec537fc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'pygame.math.Vector2' object has no attribute 'limit'\"), <traceback object at 0x7fd1ec537b00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('13 == 13'), <traceback object at 0x7f1f7503d700>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Agent' object has no attribute 'screen'\"), <traceback object at 0x7f19527c3840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f19527ccc00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f19527cc300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f19527cce40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(308, 228) == (308, 228)'), <traceback object at 0x7f270d4b1f40>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('91 == 91'), <traceback object at 0x7f270d428580>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'ValueError'>, ValueError(\"Can't normalize Vector of length Zero\"), <traceback object at 0x7f4f4d940800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'ValueError'>, ValueError(\"Can't normalize Vector of length Zero\"), <traceback object at 0x7f4f4d930640>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'ValueError'>, ValueError(\"Can't normalize Vector of length Zero\"), <traceback object at 0x7f4f4d930600>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'ValueError'>, ValueError(\"Can't normalize Vector of length Zero\"), <traceback object at 0x7f4f4d930700>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f2c4584d780>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f2c2394a100>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f2c2394a1c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f2c2394a040>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError('update() takes 1 positional argument but 2 were given'), <traceback object at 0x7ff775fdc400>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('update() takes 1 positional argument but 2 were given'), <traceback object at 0x7ff776045740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError('update() takes 1 positional argument but 2 were given'), <traceback object at 0x7ff776045a40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError('update() takes 1 positional argument but 2 were given'), <traceback object at 0x7ff7760455c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(130, 90) == (130, 90)'), <traceback object at 0x7f599bb095c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fcd729ca540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fcd729cf9c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fcd729cf480>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fcd729cfb80>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(97), <traceback object at 0x7fafd6448e80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('100 == 100'), <traceback object at 0x7fafd63d4fc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(127, 155) == (127, 155)'), <traceback object at 0x7fafd63d4b80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7fbdd721ad00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7fbdd7207340>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7fbdd7207e80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7fbdd7207300>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('100 == 100'), <traceback object at 0x7f4292737740>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(246, 171) == (246, 171)'), <traceback object at 0x7f4292737200>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(97), <traceback object at 0x7f69bbb50f40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(389, 283) == (389, 283)'), <traceback object at 0x7f69bbb42100>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(97), <traceback object at 0x7f123297a840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AssertionError'>, AssertionError('(356, 37) == (356, 37)'), <traceback object at 0x7f123296a200>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(305, 225) == (305, 225)'), <traceback object at 0x7f123296a600>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(308, 228) == (308, 228)'), <traceback object at 0x7f45f9d824c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(51, 38) == (51, 38)'), <traceback object at 0x7f45f9d76500>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(308, 228) == (308, 228)'), <traceback object at 0x7ff806325380>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f67b8a817c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f67b8ae4640>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f67b8ae9ac0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f67b8ae9280>)",
+                "status": "ERROR"
+            }
+        ]
+    ],
+    "gpt4_one_shot_debug_token": [
+        11049,
+        19346,
+        21111,
+        19441,
+        20273,
+        17360,
+        20497,
+        21132,
+        21184,
+        21078,
+        14739,
+        20415,
+        20904,
+        20679,
+        19757,
+        16874,
+        20460,
+        8914,
+        20701,
+        20590
+    ],
+    "gpt4_sequential_debug": [
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(308, 228) == (308, 228)'), <traceback object at 0x7f153216ce00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'KeyError'>, KeyError(32), <traceback object at 0x7f5289dd1f80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'agent'\"), <traceback object at 0x7f5289dc14c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'agent'\"), <traceback object at 0x7f5289e39c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'agent'\"), <traceback object at 0x7f5289e39280>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('0 == 0'), <traceback object at 0x7f7e72597c80>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AssertionError'>, AssertionError('(77, 97) == (77, 97)'), <traceback object at 0x7f7e725973c0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(171, 327) == (171, 327)'), <traceback object at 0x7f7e72597100>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f786c157a40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f786c096100>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f786c096e40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f786c0967c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(308, 228) == (308, 228)'), <traceback object at 0x7fa9af11fe00>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'speed'\"), <traceback object at 0x7f978e137800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'speed'\"), <traceback object at 0x7f978e139ac0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'speed'\"), <traceback object at 0x7f978e139800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'speed'\"), <traceback object at 0x7f978e139340>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f1e82bea2c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f1e82c53700>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f1e82c53a00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"update() missing 1 required positional argument: 'target'\"), <traceback object at 0x7f1e82c53580>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fda4305c740>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fda430c9840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fda4305af40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fda4305ab00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(308, 228) == (308, 228)'), <traceback object at 0x7f622dba0540>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Game' object has no attribute 'score'\"), <traceback object at 0x7f622db91300>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('96 == 96'), <traceback object at 0x7fcb3c1c8dc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(308, 228) == (308, 228)'), <traceback object at 0x7f08e5dc0900>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fb5b436b5c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fb5a247a280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fb5a247ac80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fb5a247aac0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('(308, 228) == (308, 228)'), <traceback object at 0x7f36f450d800>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('100 == 100'), <traceback object at 0x7f36f4505340>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(490, 328) == (490, 328)'), <traceback object at 0x7f36f4505200>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'agent'\"), <traceback object at 0x7f5c77864600>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'agent'\"), <traceback object at 0x7f5c778601c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'agent'\"), <traceback object at 0x7f5c77860d80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'RedPuck' object has no attribute 'agent'\"), <traceback object at 0x7f5c777ee140>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('(187, 70) == (187, 70)'), <traceback object at 0x7f6123bff340>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_agent_movement",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_collision",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_green_dot_relocation",
+                "test_number": 8,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_red_puck_movement",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ]
+    ],
+    "gpt4_sequential_debug_token": [
+        118088,
+        162676,
+        62223,
+        161734,
+        138684,
+        142867,
+        90334,
+        83759,
+        93720,
+        135189,
+        171111,
+        138633,
+        148726,
+        141022,
+        164796,
+        113577,
+        98406
+    ],
+    "gpt4_one_shot_acc": 0.175,
+    "gpt4_one_shot_debug_acc": 0.275
+}

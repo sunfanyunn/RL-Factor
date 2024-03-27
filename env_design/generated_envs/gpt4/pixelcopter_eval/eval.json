@@ -1,0 +1,1498 @@
+{
+    "game": "pixelcopter",
+    "gpt4_one_shot": [
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('invalid rect assignment'), <traceback object at 0x7f5d99862940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('226 not less than 225'), <traceback object at 0x7f5d997ee940>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fe74ffbe400>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('226 not less than 225'), <traceback object at 0x7fe74ff51e80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fa68076e240>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"'Pixelcopter' object is not iterable\"), <traceback object at 0x7f72b928d0c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"'Pixelcopter' object is not iterable\"), <traceback object at 0x7f72b921c2c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"'Pixelcopter' object is not iterable\"), <traceback object at 0x7f72b921c280>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fe612bd4340>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('215 not less than 215'), <traceback object at 0x7fe612b56ec0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fcec7178c80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('221 not less than 220'), <traceback object at 0x7fcec710de80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'image'\"), <traceback object at 0x7fbdf49f0a80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('215 not less than 215'), <traceback object at 0x7fbdf4975c80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'image'\"), <traceback object at 0x7f61b6a58c40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f61b6a52080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f61b69e3cc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('221 not less than 220'), <traceback object at 0x7f3d17b51480>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f3769a3bec0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'top' and 'bottom'\"), <traceback object at 0x7f96e5c640c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'y_pos' and 'height'\"), <traceback object at 0x7f15ced50040>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('216 not less than 215'), <traceback object at 0x7f15ced4e6c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'bottom' and 'height'\"), <traceback object at 0x7fbb96648bc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fbb965d3280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fbb965d3c40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f90500bd380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fd64c55af40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fe1209d8e40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('215 not less than 215'), <traceback object at 0x7fe1209ce100>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'image'\"), <traceback object at 0x7f50b9ab41c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f50b9a41280>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('221 not less than 220'), <traceback object at 0x7f50b9a41a40>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f83112a8880>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('213 not less than 210'), <traceback object at 0x7f8311233740>)",
+                "status": "FAIL"
+            }
+        ]
+    ],
+    "gpt4_one_shot_token": [
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895,
+        895
+    ],
+    "gpt4_one_shot_debug": [
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fe74ffbe400>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('226 not less than 225'), <traceback object at 0x7fe74ff51e80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'top' and 'height'\"), <traceback object at 0x7f55860f2700>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'AssertionError'>, AssertionError('225 not greater than 225'), <traceback object at 0x7f5586025dc0>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'top' and 'bottom'\"), <traceback object at 0x7f3da7d1cf80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('215 not less than 215'), <traceback object at 0x7f3da7bba980>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f2c39096980>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f2c3908d840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f2c39092600>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('190 not less than 190'), <traceback object at 0x7efcf8c85200>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'top' and 'bottom'\"), <traceback object at 0x7f0d362ec3c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('220 not less than 220'), <traceback object at 0x7f0d243f3080>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'image'\"), <traceback object at 0x7f61b6a58c40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f61b6a52080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f61b69e3cc0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'top' and 'bottom'\"), <traceback object at 0x7f5d8412dec0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('221 not less than 220'), <traceback object at 0x7f2649766540>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'top' and 'height'\"), <traceback object at 0x7f5255a4f240>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('225 not less than 225'), <traceback object at 0x7f5255997b80>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'y_pos' and 'height'\"), <traceback object at 0x7fb382f61800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('216 not less than 215'), <traceback object at 0x7fb382f55a40>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'bottom' and 'height'\"), <traceback object at 0x7fbb96648bc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fbb965d3280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fbb965d3c40>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f90500bd380>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fa283ef8680>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fa283eeee40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7fa283eeeec0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f5286958f80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('size must be two numbers'), <traceback object at 0x7f4b0a16f640>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f00487ad940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('220 not less than 220'), <traceback object at 0x7f00484efa40>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "message": "(<class 'AssertionError'>, AssertionError('False is not true'), <traceback object at 0x7f158f459300>)",
+                "status": "FAIL"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"unsupported operand type(s) for -: 'NoneType' and 'NoneType'\"), <traceback object at 0x7f1df2eea840>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f1df2eeef00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7f1df2eee5c0>)",
+                "status": "ERROR"
+            }
+        ]
+    ],
+    "gpt4_one_shot_debug_token": [
+        6541,
+        5843,
+        4849,
+        7372,
+        19500,
+        20307,
+        2858,
+        2749,
+        7933,
+        6757,
+        10541,
+        2613,
+        19996,
+        20079,
+        19122,
+        895,
+        21242,
+        19756,
+        20969,
+        19384
+    ],
+    "gpt4_sequential_debug": [
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'NameError'>, NameError(\"name 'game' is not defined\"), <traceback object at 0x7f5b098b5280>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'NameError'>, NameError(\"name 'game' is not defined\"), <traceback object at 0x7f5b098b7940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'NameError'>, NameError(\"name 'game' is not defined\"), <traceback object at 0x7f5b099289c0>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 3 required positional arguments: 'top', 'bottom', and 'spacing'\"), <traceback object at 0x7fd2c2897940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'top' and 'bottom'\"), <traceback object at 0x7f3294121580>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('215 not less than 215'), <traceback object at 0x7f32940ad7c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f5d93792a80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('225 not less than 225'), <traceback object at 0x7f5d937fd100>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('215 not less than 215'), <traceback object at 0x7f8d56914f00>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f75f28f3940>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('216 not less than 215'), <traceback object at 0x7f40100cc880>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('215 not less than 215'), <traceback object at 0x7f321ee24400>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 4 required positional arguments: 'game', 'x', 'height', and 'is_top'\"), <traceback object at 0x7fc974360d40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f46baaa19c0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('225 not less than 225'), <traceback object at 0x7f46a8506b40>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError('invalid rect assignment'), <traceback object at 0x7fdf085cc640>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'ValueError'>, ValueError('Either top or bottom must be specified'), <traceback object at 0x7f9934082540>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('224 not less than 224'), <traceback object at 0x7f993407b6c0>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('225 not less than 225'), <traceback object at 0x7fda50155e00>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fdae7950800>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'NameError'>, NameError(\"name 'game' is not defined\"), <traceback object at 0x7fdae78c8e40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'NameError'>, NameError(\"name 'game' is not defined\"), <traceback object at 0x7fdae78ca140>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 1 required positional argument: 'game'\"), <traceback object at 0x7ff667d02080>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7ff667c86a40>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'TypeError'>, TypeError(\"run() got an unexpected keyword argument 'event'\"), <traceback object at 0x7ff667c8aa00>)",
+                "status": "ERROR"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7fcb95881c00>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7efb70689a80>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "message": "(<class 'AssertionError'>, AssertionError('220 not less than 220'), <traceback object at 0x7efb7067da00>)",
+                "status": "FAIL"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'TypeError'>, TypeError(\"__init__() missing 2 required positional arguments: 'top' and 'bottom'\"), <traceback object at 0x7f76ff479bc0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ],
+        [
+            {
+                "function_name": "test_collision_with_obstacle",
+                "test_number": 5,
+                "message": "(<class 'AttributeError'>, AttributeError(\"'Obstacle' object has no attribute 'rect'\"), <traceback object at 0x7f64745a7ec0>)",
+                "status": "ERROR"
+            },
+            {
+                "function_name": "test_gravity",
+                "test_number": 2,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_obstacle_spawn",
+                "test_number": 4,
+                "status": "OK"
+            },
+            {
+                "function_name": "test_pixelcopter_jump",
+                "test_number": 3,
+                "status": "OK"
+            }
+        ]
+    ],
+    "gpt4_sequential_debug_token": [
+        45972,
+        42387,
+        59397,
+        77645,
+        49270,
+        130874,
+        27488,
+        80740,
+        47731,
+        41131,
+        55011,
+        25893,
+        37079,
+        75076,
+        34838,
+        44115,
+        31467,
+        29388,
+        56909,
+        105400
+    ],
+    "gpt4_one_shot_acc": 0.4875,
+    "gpt4_one_shot_debug_acc": 0.55,
+    "gpt4_sequential_debug_acc": 0.625
+}

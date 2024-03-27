@@ -41,14 +41,14 @@ class PygameEnv(gym.Env):
         self.p.init()
         self.all_possible_actions = self.p.getActionSet()
 
-        self.action_space = gym.spaces.Discrete(n=len(self.all_possible_actions))  # 0: do nothing; 1: flap
-        #self.observation_space = gym.spaces.Box(low=0, high=255, shape=(self.game.state_manager.SCREEN_WIDTH, self.game.state_manager.SCREEN_HEIGHT, 3), dtype=np.uint8)
+        # 0: do nothing; 1: flap
+        self.action_space = gym.spaces.Discrete(n=len(self.all_possible_actions))  
+        # self.observation_space = gym.spaces.Box(low=0, high=255, shape=(self.game.state_manager.SCREEN_WIDTH, self.game.state_manager.SCREEN_HEIGHT, 3), dtype=np.uint8)
         self.observation_space = gym.spaces.Box(-np.inf, np.inf, shape=self.get_state().shape, dtype=np.float64)
 
         self.current_step = 0
 
     def preprocess_state(self, observation_dict, padding_number=10):
-
         new_observation_dict = {}
         if self.env_name == "waterworld":
             for key in sorted(observation_dict.keys()):
@@ -125,12 +125,12 @@ def env_creator(env_config):
 
 if __name__ == "__main__":
     from ray.rllib.utils import check_env
-    for env_name in ["waterworld", "snake"]:
+    for env_name in ["pong", "waterworld", "snake"]:
         env_config = {"name": env_name}
         env = env_creator(env_config)
-        print(env.p.getActionSet())
         check_env(env)
         print(f"{env_name} passed")
+        print(env.p.getActionSet())
 
         #observation, info = env.reset()
         observation, info = env.reset()
