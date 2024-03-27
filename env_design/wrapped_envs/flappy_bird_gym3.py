@@ -50,6 +50,7 @@ class PygameEnv(gym.Env):
             reward = self.get_reward() + 0.1
         else:
             reward = -1
+        reward = reward * 100
         terminated = not running
         truncated = False
         info = {}  # Additional info for debugging

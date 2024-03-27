@@ -1,8 +1,18 @@
 import os
 from ray import tune
 from ray.rllib.policy import policy
-# append path to this file to sys.path
-# sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+from randomize_env_test import env_creator
+
+
+# def custom_metrics_fn(info):
+#     episode = info["episode"]
+#     env_name = episode.env.env_name  # Retrieve the environment name from the custom attribute
+#     episode.custom_metrics["env_name"] = env_name
+#     return episode.custom_metrics
+
+def custom_metrics_fn(info):
+    episode = info["episode"]
+    return episode.custom_metrics
 
 
 def get_experiment_config(args, default_config):
@@ -91,43 +101,10 @@ def get_experiment_config(args, default_config):
     # Environment
     run_configs.env = params_dict['env_name']
     run_configs.env_config = params_dict['env_config']
-
-    # Setup multi-agent policies. The below code will initialize independent
-    # policies for each agent.
-    # base_env = make_envs.env_creator(run_configs.env_config)
-
-    # policies = {}
-    # player_to_agent = {}
-    # for i in range(len(player_roles)):
-    #     rgb_shape = base_env.observation_space[f"player_{i}"]["RGB"].shape
-    #     sprite_x = rgb_shape[0]
-    #     sprite_y = rgb_shape[1]
-
-    #     policies[f"agent_{i}"] = policy.PolicySpec(
-    #         observation_space=base_env.observation_space[f"player_{i}"],
-    #         action_space=base_env.action_space[f"player_{i}"],
-    #         config={
-    #             "model": {
-    #                 "conv_filters": [[16, [8, 8], 1],
-    #                                 [128, [sprite_x, sprite_y], 1]],
-    #             },
-    #         })
-    #     player_to_agent[f"player_{i}"] = f"agent_{i}"
-
-    # run_configs.multi_agent(policies=policies, policy_mapping_fn=(lambda agent_id, *args, **kwargs: 
-    #                                                               player_to_agent[agent_id]))    
-    # Agent NN Model
-    # Fully connect network with number of hidden layers to be used.
-    #run_configs.model["fcnet_hiddens"] = params_dict['fcnet_hidden']
-    ## Post conv fcnet with number of hidden layers to be used.
-    #run_configs.model["post_fcnet_hiddens"] = params_dict['post_fcnet_hidden']
-    #run_configs.model["conv_activation"] = params_dict['cnn_activation'] 
-    #run_configs.model["fcnet_activation"] = params_dict['fcnet_activation']
-    #run_configs.model["post_fcnet_activation"] = params_dict['post_fcnet_activation']
-    #run_configs.model["use_lstm"] = params_dict['use_lstm']
-    #run_configs.model["lstm_use_prev_action"] = params_dict['lstm_use_prev_action']
-    #run_configs.model["lstm_use_prev_reward"] = params_dict['lstm_use_prev_reward']
-    #run_configs.model["lstm_cell_size"] = params_dict['lstm_cell_size']
+    # Episode env name for meta rl
+    run_configs.custom_metric_fn = custom_metrics_fn
+    #run_configs.env = env_creator
+    run_configs.env = "my_env"
 
     """ Adding hyper-parameter to search """
     # ray air.RunConfig

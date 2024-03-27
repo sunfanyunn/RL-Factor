@@ -10,7 +10,7 @@ from ray import tune
 from ray.tune import registry
 from ray.air.integrations.wandb import WandbLoggerCallback
 from ray.rllib.core.rl_module.rl_module import SingleAgentRLModuleSpec
-from prepare_env import env_creator
+from randomize_env_test import env_creator
 
 
 def get_cli_args():
@@ -112,19 +112,33 @@ def get_cli_args():
     return args
 
 
+# class CustomWandbLoggerCallback(WandbLoggerCallback):
+#     def on_train_result(self, *, algorithm, result, **kwargs):
+#         result["env_name"] = result["custom_metrics"]["env_name"]
+#         super().on_train_result(algorithm=algorithm, result=result, **kwargs)
+
+class CustomWandbLoggerCallback(WandbLoggerCallback):
+    def on_episode_end(self, *, worker, base_env, policies, episode, env_index, **kwargs):
+        env_name = base_env.get_unwrapped()[0].env_name
+        wandb.config.update({"env_name": env_name}, allow_val_change=True)
+        super().on_episode_end(worker=worker, base_env=base_env, policies=policies,
+                               episode=episode, env_index=env_index, **kwargs)
+
+
 if __name__ == "__main__":
 
     args = get_cli_args()
     # Set up Ray. Use local mode for debugging. Ignore reinit error.
     # Register environment
-    registry.register_env("my_env", env_creator)
+    #registry.register_env("my_env", env_creator)
+    registry.register_env("my_env", lambda config: env_creator(config))
 
     # initialize default configurations for native RLlib algorithms (we use one solver 
     # all exploration modules)  
     # Fetch experiment configurations
     #from configs import get_experiment_config
     # hyperparameter search
-    from rl_configs import get_experiment_config
+    from meta_rl_configs import get_experiment_config
     if args.algo == "dreamerv3":
         assert False
         from ray.rllib.algorithms import dreamerv3
@@ -175,11 +189,11 @@ if __name__ == "__main__":
 
       # Set up Weights And Biases logging if API key is set in environment variable.
       wdb_callbacks = [
-          WandbLoggerCallback(
-              project=wandb_project,
-              group=wandb_group,
-              api_key=os.environ["WANDB_API_KEY"],
-              log_config=True,
+            CustomWandbLoggerCallback(
+                project=wandb_project,
+                group=wandb_group,
+                api_key=os.environ["WANDB_API_KEY"],
+                log_config=True,
           )
       ]
     else:
