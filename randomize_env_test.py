@@ -3,10 +3,12 @@ import random
 import gymnasium as gym
 import numpy as np
 from ple import PLE
-from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
-from env_design.wrapped_envs.flappy_bird_gym2 import PygameEnv as PygameEnv2
-from env_design.wrapped_envs.flappy_bird_gym3 import PygameEnv as PygameEnv3
+# custom envs - don't work
+# from env_design.wrapped_envs.flappy_bird_gym import PygameEnv
+# from env_design.wrapped_envs.flappy_bird_gym2 import PygameEnv as PygameEnv2
+# from env_design.wrapped_envs.flappy_bird_gym3 import PygameEnv as PygameEnv3
 
+# pygame envs - do work
 class PygameEnv(gym.Env):
     """Custom Environment that follows gym interface"""
 

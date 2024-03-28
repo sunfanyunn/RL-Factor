@@ -112,11 +112,6 @@ def get_cli_args():
     return args
 
 
-# class CustomWandbLoggerCallback(WandbLoggerCallback):
-#     def on_train_result(self, *, algorithm, result, **kwargs):
-#         result["env_name"] = result["custom_metrics"]["env_name"]
-#         super().on_train_result(algorithm=algorithm, result=result, **kwargs)
-
 class CustomWandbLoggerCallback(WandbLoggerCallback):
     def on_episode_end(self, *, worker, base_env, policies, episode, env_index, **kwargs):
         env_name = base_env.get_unwrapped()[0].env_name
